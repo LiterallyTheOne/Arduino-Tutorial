@@ -222,3 +222,10 @@ You should have an output like below:
 
 ![Arduino LED Blink](arduino-led-blink.gif)
 
+## Conclusion
+
+In this tutorial, we have introduced **Arduino**.
+Then we built a **Hello World** project that showcases how we can make
+a **Blinking LED**.
+In the future, we are going to learn more about **GPIO**, and we do
+more complicated projects together.
