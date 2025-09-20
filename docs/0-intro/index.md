@@ -6,7 +6,7 @@ description: "Introduction to Arduino"
 weight: 10
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
 image: "intro.webp"
-code: ""
+code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/0-intro"
 ---
 
 # Introduction
