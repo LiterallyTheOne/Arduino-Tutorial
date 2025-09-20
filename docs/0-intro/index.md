@@ -42,5 +42,15 @@ It is known as one of the best tools for learning electronics.
 ![Arduino](arduino.webp)
 
 In the image above, you can see an **Arduino UNO** board,
-Which is the main focus of this tutorial.
+which is the main focus of this tutorial.
+As you can see, on the **Arduino UNO's board**, we have a microcontroller.
+This microcontroller is an **AVR microcontroller**, called **ATMEGA328P**.
+**Arduino** has made a really great and super-easy-to-use framework for
+**AVR Microcontrollers** that we are going to use mostly in this tutorial.
+
+## Blinking LED
+
+Let's start with a simple project as a **Hello World**.
+The goal of this project is to connect an **LED** to an **Arduino UNO** in our simulation and make it blink
+with a certain frequency. At first let's open up **SimulIDE
 
