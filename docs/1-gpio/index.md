@@ -165,6 +165,18 @@ The output would be something like below:
 
 ![Arduino LED Button On and Off](arduino-led-button-on-off.gif)
 
+## Control three LEDs
+
+Now we know how to set a pin as an input and output.
+Let's add more LEDs to the board and change our program in a way that whenever we press the button,
+the LED that is turned on switches.
+Also, in our simulation, we can control the color of the LEDs.
+Let's change their colors to **red**, **yellow**, and **green**, like a stoplight.
+You are free to connect the LEDs to whichever pin you want.
+Your output should be something like this:
+
+![Stop](output.gif)
+
 
 
 
