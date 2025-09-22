@@ -175,7 +175,7 @@ Let's change their colors to **red**, **yellow**, and **green**, like a stopligh
 You are free to connect the LEDs to whichever pin you want.
 Your output should be something like this:
 
-![Stop](output.gif)
+![Traffic Light](traffic-light.gif)
 
 
 
