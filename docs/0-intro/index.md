@@ -47,8 +47,10 @@ As you can see, on the **Arduino UNO's board**, we have a microcontroller.
 This microcontroller is an **AVR microcontroller**, called **ATMEGA328P**.
 **Arduino** has made a really great and super-easy-to-use framework for
 **AVR Microcontrollers** that we are going to use mostly in this tutorial.
-At the top of this image, you can see there are **13 pins** that we can use
-for input and output.
+At the top of this image, you can see there are **14 pins** that we can use
+for **digital** input and output (D0-D13).
+Also, there are **6 pins** at the bottom of this image
+that we can use for **analog** input and output (A0-A5).
 These pins are called **General-Purpose input/output** (**GPIO**).
 
 ## Blinking LED
