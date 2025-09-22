@@ -135,6 +135,32 @@ The reason that we put `delay(500)` is simple.
 When we press the key down and release it, it takes about `200ms`.
 In this `200ms`, `button_pressed` is `true`, so our code in the `if` statement would be executed many times.
 To avoid this from happening, we put a `delay(500)`.
+You can see the full code here:
+
+```cpp
+#include <Arduino.h>
+
+bool led_state = false;
+bool button_pressed = false;
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(2, INPUT);
+}
+
+void loop()
+{
+  button_pressed = digitalRead(2);
+  if (button_pressed)
+  {
+    led_state = !led_state;
+    digitalWrite(13, led_state);
+    delay(500);
+  }
+}
+```
+
 The output would be something like below:
 
 ![Arduino LED Button On and Off](arduino-led-button-on-off.gif)
