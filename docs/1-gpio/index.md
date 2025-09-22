@@ -117,7 +117,6 @@ Our logic is:
     - Change the `led_state`.
     - Write the `led_state` to output.
 
-
 So, let's write it down.
 
 ```cpp
@@ -177,6 +176,13 @@ Your output should be something like this:
 
 ![Traffic Light](traffic-light.gif)
 
+## Add another button
+
+Now, let's add another button that could disable the traffic light, and when we press it again,
+it would enable it again.
+Your output should be like this:
+
+![Traffic light two buttons](traffic-light-two-buttons.gif)
 
 
 
