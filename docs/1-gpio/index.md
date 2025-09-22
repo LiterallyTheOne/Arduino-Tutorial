@@ -184,6 +184,15 @@ Your output should be like this:
 
 ![Traffic light two buttons](traffic-light-two-buttons.gif)
 
+## Conclusion
+
+In this tutorial, we learned how to use **Digital GPIO**.
+We have introduced all the pins that you can use for **Digital GPIO** and how to program them in order to work
+correctly.
+We walked you through how to manage and program a simple LED and button.
+Then, we asked you to expand the number of LEDs to learn the **Output GPIO** better.
+Finally, we asked you to add another button to make you more comfortable with **Input GPIO**.
+
 
 
 
