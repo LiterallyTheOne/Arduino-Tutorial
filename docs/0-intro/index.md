@@ -65,11 +65,13 @@ At first, let's light up an **LED** in **SimulIDE**.
 To do so, we can follow these steps:
 
 - Open up **SimulIDE**.
-- In the left panel, drag an **LED** (Outputs/Leds/LED) and put it on the board.
-- In the left panel, drag a **Fixed Voltage** (Sources/Fixed voltage) and put it on the board.
-- In the left panel, drag a **Ground** (Sources/Ground) and put it on the board.
-- Connect the **Fixed Voltage** to the **anode** of **LED** (the longest pin).
-- Connect the **Ground** to the **cathode** of **LED** (the shortest pin).
+- On the left panel, drag an **LED** (Outputs/Leds/LED) and put it on the board.
+- On the left panel, drag a **Fixed Voltage** (Sources/Fixed voltage) and put it on the board.
+- On the left panel, drag a **Ground** (Sources/Ground) and put it on the board.
+- On the left panel, drag a **Resistor** (Passive/Resistors/Resistor) and put it on the board.
+- Connect the **Fixed Voltage** to one of the pins of the **Resistor**.
+- Connect the other pin of the **Resistor** to the **anode** (the longest pin) of **LED**.
+- Connect the **Ground** to the **cathode** (the shortest pin) of **LED**.
 - Click on the **Fixed Voltage** to turn it on.
 - Press **Start simulation** in the top panel.
 
@@ -87,9 +89,9 @@ Now, let's put an **Arduino Uno** on the board and control the state of
 To do so, we can follow these steps:
 
 - In the left panel, drag an **Arduino UNO** (Micro/Arduino/Uno) and put it on the board.
-- Disconnect the **Fixed voltage** from the anode of the **LED** and connect it to **RST**.
+- Disconnect the **Fixed voltage** from the **Resistor** and connect it to **RST**.
 - Let the **Fixed voltage** to be on.
-- Connect the anode of the **LED** to the **pin 13**.
+- Connect pin of **Resistor** which was connected to the anode of the **LED**, to the **pin 13**.
 
 You should have something like this:
 

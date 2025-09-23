@@ -7,13 +7,17 @@
 <item itemtype="Ground" CircId="Ground-3" mainComp="false" Show_id="false" Show_Val="false" Pos="20,-136" rotation="0" hflip="1" vflip="1" label="Ground-3" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
 <item itemtype="Subcircuit" CircId="Uno-4" mainComp="false" Show_id="true" Show_Val="false" Pos="40,-344" rotation="0" hflip="1" vflip="1" label="Uno-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
-<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="Users/ramin/Documents/PlatformIO/Projects/s0_intro_led_blink/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../PlatformIO/Projects/s0_intro_led_blink/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
+
+<item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-8,-216" rotation="0" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
 
 <item itemtype="Connector" uid="Connector-2" startpinid="Led-1-rPin" endpinid="Ground-3-Gnd" pointList="4,-180,20,-180,20,-152" />
 
 <item itemtype="Connector" uid="Connector-3" startpinid="Fixed Voltage-2-outnod" endpinid="Uno-4-RST" pointList="236,-232,192,-232" />
 
-<item itemtype="Connector" uid="Connector-4" startpinid="Led-1-lPin" endpinid="Uno-4-13" pointList="-28,-180,-44,-180,-44,-216,48,-216" />
+<item itemtype="Connector" uid="Connector-5" startpinid="Uno-4-13" endpinid="Resistor-5-rPin" pointList="48,-216,8,-216" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Resistor-5-lPin" endpinid="Led-1-lPin" pointList="-24,-216,-44,-216,-44,-180,-28,-180" />
 
 </circuit>
