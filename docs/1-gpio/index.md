@@ -67,7 +67,9 @@ Then we can follow these steps to connect an LED and a key to an **Arduino Uno**
 * Put a **fixed voltage** on the board.
 * Connect the **fixed voltage** to the reset pin of the **Arduino Uno** and let it be **on**.
 * Put an **LED** on the board.
-* Connect the **anode** (tallest pin) of the **LED** to the **pin 13** of **Arduino Uno**.
+* Put a **Resistor** on the board.
+* Connect the **anode** (tallest pin) of the **LED** to on pin of the **Resistor**.
+* Connect the other pin of the **Resistor** to the **pin 13** of **Arduino Uno**.
 * Put a **ground** on the board.
 * Connect the **cathode** (shortest pin) of the **LED** to the **ground**.
 * Put a **button** (Switches/push) on the board.
