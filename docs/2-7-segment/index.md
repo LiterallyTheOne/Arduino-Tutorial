@@ -1,8 +1,8 @@
 ---
 date: '2025-09-24T08:37:00+03:30'
 draft: false
-title: '7Segment'
-description: "Explaining 7Segment and how to connect it to Arduino"
+title: '7-Segment'
+description: "Explaining 7-Segment and how to connect it to Arduino"
 weight: 30
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
 image: "gpio-digital-2.webp"
