@@ -1,0 +1,29 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Seven Segment" CircId="Seven Segment-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-140,-124" rotation="0" hflip="1" vflip="1" label="Seven Segment-1" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" NumDisplays="1" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="20 mA" Resistance="1 Ω" />
+
+<item itemtype="Subcircuit" CircId="Uno-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-8,-252" rotation="0" hflip="1" vflip="1" label="Uno-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="Users/ramin/Documents/PlatformIO/Projects/a2_7segment/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-132,-52" rotation="-90" hflip="1" vflip="1" label="Fixed Voltage-3" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="false" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Seven Segment-1-pin_a" endpinid="Uno-2-0" pointList="-164,-148,-192,-148,-192,-236,0,-236" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Seven Segment-1-pin_b" endpinid="Uno-2-1" pointList="-164,-140,-196,-140,-196,-228,0,-228" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Seven Segment-1-pin_c" endpinid="Uno-2-2" pointList="-164,-132,-200,-132,-200,-220,0,-220" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Seven Segment-1-pin_d" endpinid="Uno-2-3" pointList="-164,-124,-204,-124,-204,-212,0,-212" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Seven Segment-1-pin_e" endpinid="Uno-2-4" pointList="-164,-116,-212,-116,-212,-204,0,-204" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Seven Segment-1-pin_f" endpinid="Uno-2-5" pointList="-164,-108,-220,-108,-220,-196,0,-196" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Seven Segment-1-pin_g" endpinid="Uno-2-6" pointList="-164,-100,-228,-100,-228,-188,0,-188" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Seven Segment-1-pin_dot" endpinid="Uno-2-7" pointList="-148,-92,-148,-84,-236,-84,-236,-180,0,-180" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Fixed Voltage-3-outnod" endpinid="Seven Segment-1-pin_commona" pointList="-132,-68,-132,-92" />
+
+</circuit>
