@@ -1,5 +1,5 @@
 ---
-date: '2025-09-20T08:37:00+03:30'
+date: '2025-09-21T08:37:00+03:30'
 draft: false
 title: 'GPIO'
 description: "Explaining to General-Purpose Input/Output in Arduino"
