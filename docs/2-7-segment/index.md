@@ -5,7 +5,7 @@ title: '7-Segment'
 description: "Explaining 7-Segment and how to connect it to Arduino"
 weight: 30
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
-image: "gpio-digital-2.webp"
+image: "7-segment.webp"
 code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/2-7-segment"
 ---
 
