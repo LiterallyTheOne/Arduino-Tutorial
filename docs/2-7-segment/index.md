@@ -9,7 +9,7 @@ image: "gpio-digital-2.webp"
 code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/2-7-segment"
 ---
 
-# 7Segment
+# 7-Segment
 
 ## Introduction
 
@@ -17,7 +17,7 @@ In the previous tutorial, we learned about **GPIO**.
 We managed to work with LEDs and buttons.
 In this tutorial, we are going to work with **7-segment**.
 
-## What is a 7segment?
+## What is a 7-segment?
 
 A 7-segment is a set of 7 LEDs that can be used to show numbers and some letters.
 Each LED is called a segment.
@@ -28,7 +28,7 @@ Some 7-segments have a dot that is called **dp** (dot point).
 
 We can find a **7-segment** in output/LEDs/7 Segment.
 
-## Numbers on 7segment
+## Numbers on 7-segment
 
 At first, let's put a 7-segment on the board (output/LEDs/7 Segment)
 and connect all of its pins to fixed voltages like below:
@@ -51,7 +51,7 @@ Now we can make all the numbers and store them in the format below:
 |----|---|---|---|---|---|---|---|
 | 0  | 0 | 1 | 1 | 1 | 1 | 1 | 1 |
 
-## Connect a 7segment to an Arduino
+## Connect a 7-segment to an Arduino
 
 Now, let's add our **7-segment** to an **Arduino**.
 To do that, we can follow these steps:
