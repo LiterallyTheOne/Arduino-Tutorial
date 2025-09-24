@@ -1,15 +1,15 @@
 ---
-date: '2025-09-20T08:37:00+03:30'
+date: '2025-09-24T08:37:00+03:30'
 draft: false
-title: 'GPIO Digital 2'
-description: "Explaining General-Purpose Input/Output in Arduino more advanced"
+title: '7Segment'
+description: "Explaining 7Segment and how to connect it to Arduino"
 weight: 30
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
 image: "gpio-digital-2.webp"
-code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/2-gpio-digital-2"
+code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/2-7-segment"
 ---
 
-# GPIO Digital 2
+# 7Segment
 
 ## Introduction
 
@@ -17,7 +17,7 @@ In the previous tutorial, we learned about **GPIO**.
 We managed to work with LEDs and buttons.
 In this tutorial, we are going to work with **7-segment**.
 
-## 7segment
+## What is a 7segment?
 
 A 7-segment is a set of 7 LEDs that can be used to show numbers and some letters.
 Each LED is called a segment.
@@ -138,3 +138,12 @@ Your output should be like this:
 
 ![Arduino 7-segment counter pause reverse](arduino-7segment-counter-pause-reverse.gif)
 
+## Conclusion
+
+In this tutorial, we learned about **7-segment** and one of the ways that
+we can connect to an **Arduino**.
+First, we calculated the numbers by connecting **fixed voltage** to each
+pin of the **7-segment**.
+Then, we programmed a counter.
+After that, we added a pause button.
+Finally, we added a reverse button.
