@@ -57,3 +57,109 @@ After putting that on the board, we should connect the pins of it like below:
 The result should be something like below:
 
 ![LCD Arduino SimulIDE](lcd-arduino-simulide.webp)
+
+## Liquid Crystal
+
+**Liquid Crystal** is a well-known package that helps us to work with **LCD**.
+This package contain so many great and useful functions.
+You can see the list of all functions in 
+[this link](https://docs.arduino.cc/libraries/liquidcrystal/).
+
+### Add LiquidCrystal to PlatformIO
+
+To add **LiquidCrystal** to a **PlatformIO** project we should add this code
+to `platformio.ini`.
+
+```ini
+lib_deps =
+  arduino-libraries/LiquidCrystal
+```
+
+This code will download the **LiquidCrystal** and then you can import it
+in your `main.cpp` like below:
+
+```cpp
+#include <LiquidCrystal.h>
+```
+
+### Make an LCD Object
+
+Now, let's make an **LCD** object using **LiquidCrystal**.
+To do so, we can use the code below:
+
+```cpp
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+```
+
+In the code above, at first we defined the pins in a way that we connected them to our **Arduino Uno**.
+Then, we made an object of `LiquidCrystal` with those pins with the name of `lcd`.
+We put that code on top of the `setup` and `loop` function to be global.
+Now, let's talk about the functions that we can use for this object.
+
+### `begin`
+
+This function initializes the **LCD**.
+It automatically sets all the pin modes and should be called before any other **LCD** commands.
+
+The usual syntax that we use:
+
+```cpp
+lcd.begin(cols, rows);
+```
+
+Example:
+
+```cpp
+lcd.begin(16, 2);
+```
+
+### `write`
+
+Write a character on the **LCD**.
+
+Syntax:
+
+```cpp
+lcd.write(ch);
+```
+
+Example:
+
+```cpp
+lcd.write('h');
+```
+
+### `print`
+
+Write a text on the **LCD**.
+
+Syntax:
+
+```cpp
+lcd.print(text);
+```
+
+Example:
+
+```cpp
+lcd.print("Hello World!");
+```
+
+### `setCursor`
+
+Jumps to the given column and row.
+
+Syntax:
+
+```cpp
+lcd.setCursor(col, row);
+```
+
+Example:
+
+```cpp
+lcd.setCursor(5, 1);
+```
+
+### `clear`
