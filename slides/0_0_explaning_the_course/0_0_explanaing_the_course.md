@@ -39,8 +39,9 @@ By LiterallyTheOne
 ## Contact me
 
 - Email: <ramin.zarebidoky@stu.yazd.ac.ir>
-- Gmail: <ramin.zarebidoky@stu.yazd.ac.ir>
+- Gmail: <ramin.zarebidoky@gmail.com>
 - GitHub: @LiterallyTheOne
+- Telegram: @LiterallyTheOne
 
 ---
 
