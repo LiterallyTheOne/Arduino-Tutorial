@@ -175,3 +175,12 @@ Example:
 ```cpp
 lcd.clear();
 ```
+
+## LCD Hello World
+
+Now, that we know about **Liquid Crystal** and the functions that we can use, let's write a simple example.
+We want our **LCD** to show **hello** at the first row, starting from the 3rd column.
+After some pause, clear the hello and show **world** at the second row starting from the 4th column.
+Your output should be something like below:
+
+![LCD Hello World](lcd-hello-world.gif)
