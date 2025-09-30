@@ -299,3 +299,19 @@ Now, let's write a program that displays the output of the **KeyPad** on the **L
 Your output should be like this:
 
 ![LCD Keypad](lcd-keypad.gif)
+
+## Login system
+
+Now, let's write a login system.
+We have a username and password stored in our code (hard codded).
+We want user to enter a username and password.
+After that we are going to check if he has entered the correct ones or not.
+If it was correct we tell him it is correct, otherwise we tell him it
+was incorrect.
+Your output should be something like below:
+
+* Correct username: `12`
+* Correct password: `5662`
+* Enter: `#`
+
+![Login System](login-system.gif)
