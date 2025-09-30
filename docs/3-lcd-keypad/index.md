@@ -274,3 +274,21 @@ For the first argument, we changed our `keys` which were in a matrix to the form
 `makeKeymap` function.
 Then for the other arguments, we gave `rowPins`, `colPins`, `ROWS`, and `Cols` respectively.
 We named our object `keypad` which we are going to use it later.
+Now, let's talk about the function that we are mostly going to use.
+
+### `getKey`
+
+A function that checks if any keys is pressed.
+If a key was pressed, it would return the respective key and if not it would return `0`.
+
+Syntax:
+
+```cpp
+getKey();
+```
+
+Example:
+
+```cpp
+char key = getKey();
+```
