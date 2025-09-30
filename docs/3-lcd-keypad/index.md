@@ -292,3 +292,10 @@ Example:
 ```cpp
 char key = getKey();
 ```
+
+## Keypad to LCD
+
+Now, let's write a program that displays the output of the **KeyPad** on the **LCD**.
+Your output should be like this:
+
+![LCD Keypad](lcd-keypad.gif)
