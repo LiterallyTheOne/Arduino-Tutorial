@@ -184,3 +184,93 @@ After some pause, clear the hello and show **world** at the second row starting 
 Your output should be something like below:
 
 ![LCD Hello World](lcd-hello-world.gif)
+
+## Keypad
+
+**Keypad** is a series of keys in a matrix.
+It contains of keys in rows and columns.
+For example, if we have 4 rows and 3 columns we would have 12 keys.
+The advantage that a keypad gives us is that we don't require to occupy 12 pins to control 12 keys.
+Instead, we only need 7 pins, 4 for rows and 3 for columns.
+Here is an example of a **Keypad** in **SimulIDE**.
+
+![Keypad in SimulIDE](keypad-simulide.webp)
+
+### Add Keypad to Arduino Uno in SimulIDE
+
+Now, let's add a keypad to our **Arduino Uno** in our **SimulIDE**.
+We can access to the **Keypad** in **Switches/Keypad**.
+When you put it on the board, you can see there are **4 rows** and **3 columns**. 
+Let's connect each row and column like below:
+
+* row-0: 0
+* row-1: 1
+* row-2: 6
+* row-3: 7
+* col-0: 8
+* col-1: 9
+* col-2: 10
+
+You should have something like this:
+
+![Keypad Connected into an Arduino Uno](keypad-connected-arduino.webp)
+
+### Add Keypad to PlatformIO
+
+To use **Keypad** in Arduino, we can use a library called **Keypad**.
+We can simply add **Keypad** to our **PlatformIO** project by adding it to the **lib_deps** in **platformio.ini**,
+like below:
+
+```ini
+lib_deps =
+  ...
+  Keypad
+```
+
+Now we are able to import it like in our **main.cpp** like below:
+
+```cpp
+#include <Keypad.h>
+```
+
+### Make a keypad Object
+
+To create a object for our **Keypad** we should at first define a matrix for our keys like below:
+
+```cpp
+const byte ROWS = 4;
+const byte COLS = 3;
+
+char keys[ROWS][COLS] = {
+    {'1', '2', '3'},
+    {'4', '5', '6'},
+    {'7', '8', '9'},
+    {'*', '0', '#'}};
+```
+
+As you can see, we have defined two constants called **ROWS** and **COLS** which each of them represent how many rows
+and columns we have.
+Then we defined our matrix of keys in a way that we have them in our **Keypad**.
+Now, it's time to define which pins are connected to each row and column.
+To do that we can write something like below:
+
+```cpp
+byte rowPins[ROWS] = {0, 1, 6, 7};
+byte colPins[COLS] = {8, 9, 10};
+```
+
+As you recall, in our simulation we have connected our rows to the pins of **0, 1, 6, 7**
+and columns to **8, 9, 10**.
+We defined **rowPins** and **colPins** to have those values.
+Now, let's define our **Keypad Object**.
+To do so, we can use the code below:
+
+```cpp
+Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+```
+
+As you can see, in the code above, we have used `Keypad` class to create an instance of a **Keypad**.
+For the first argument, we changed our `keys` which were in a matrix to the format that `Keypad` likes, using
+`makeKeymap` function.
+Then for the other arguments, we gave `rowPins`, `colPins`, `ROWS`, and `Cols` respectively.
+We named our object `keypad` which we are going to use it later.
