@@ -315,3 +315,13 @@ Your output should be something like below:
 * Enter: `#`
 
 ![Login System](login-system.gif)
+
+## Conclusion
+
+In this tutorial, we learned how to use **LCD** and **Keypad** in **Arduino Uno**.
+First, we explained what **LCD** is and how to use **LiquidCrystal** to control it.
+Then we explained the most important functions and provided an example.
+After that, we talked about **Keypad**.
+We introduced a library with the same name to control it.
+Then, we combined **LCD** and **Keypad**.
+Finally, we provided an example to make you understand these concepts better.
