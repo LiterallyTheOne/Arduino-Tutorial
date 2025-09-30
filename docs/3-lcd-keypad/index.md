@@ -163,3 +163,15 @@ lcd.setCursor(5, 1);
 ```
 
 ### `clear`
+
+Clears the **LCD** and jumps to the start.
+
+```cpp
+lcd.clear();
+```
+
+Example:
+
+```cpp
+lcd.clear();
+```
