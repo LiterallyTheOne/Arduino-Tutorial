@@ -125,4 +125,26 @@ After I wrote down each one of them I pressed **Enter**.
 As you can see in the right panel, we can see the input that we sent to
 the **Arduino** and in the left panel we can see the response of the **Arduino**.
 
+### Read until new line
+
+If we want to read the whole string, we can use a function called
+`Serial.readStringUntil`.
+This function reads the data in the buffer until it reaches the terminator that we give it as an argument.
+As a result it returns a **String**.
+So, if we want to change our code to read the whole line, we can change it like below:
+
+```cpp
+if (Serial.available())
+{
+    String result = Serial.readStringUntil('\n');
+    Serial.println(result);
+}
+```
+
+The output would be something like this:
+
+![Serial Read String](serial-read-string.gif)
+
+As you can see, we write a whole sentence and when we press enter after some time it would print us the result.
+
 
