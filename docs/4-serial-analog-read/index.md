@@ -147,4 +147,9 @@ The output would be something like this:
 
 As you can see, we write a whole sentence and when we press enter after some time it would print us the result.
 
+### Built-it Serial Monitor in SimulIDE
+
+For debugging purposes, **SimulIDE** has implemented a **Serial Monitor** that you can see
+the transmitted and received data through that.
+To access it, you can right-click on the **Arduino Uno** then select **mega328/Open Serial Monitor/USart**.
 
