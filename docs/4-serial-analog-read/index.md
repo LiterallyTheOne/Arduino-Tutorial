@@ -95,3 +95,34 @@ Your output would be something like below:
 
 As you can see in the left panel **Hello World** is being printed constantly.
 Also, **Rx** on the terminal becomes **yellow** whenever it receives data.
+
+### Read from Serial Terminal
+
+We have managed to send data to the **Serial Terminal**.
+Now, let's talk about how to read data from it.
+To do so we can use a function called `Serial.read()`.
+It would read the incoming **byte**.
+If there is no data, it would return `-1`.
+Also, we have another function called `Serial.available()`.
+This function returns the number of bytes which are available for reading.
+So if we want to write a code that reads data and prints each character in separate lines,
+we can write something like below in the loop function:
+
+```cpp
+if (Serial.available())
+{
+    char ch = Serial.read();
+    Serial.println(ch);
+}
+```
+
+The output would be something like below:
+
+![Serial Read](serial-read.gif)
+
+In the example above, I wrote **hello** and **world** separately.
+After I wrote down each one of them I pressed **Enter**.
+As you can see in the right panel, we can see the input that we sent to
+the **Arduino** and in the left panel we can see the response of the **Arduino**.
+
+
