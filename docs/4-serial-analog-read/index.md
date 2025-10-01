@@ -46,4 +46,52 @@ You should have something like this:
 
 ![Serial Terminal](serial-terminal.webp)
 
+### Serial Hello World
 
+Now, let's create a **PlatformIO** project and write a **Hello World** for **Serial communication**.
+At first, let's initialize the **Serial Communication**.
+To do so, we can use the code below:
+
+```cpp
+Serial.begin(9600);
+```
+
+In the code above, we set the **baud rate** of our **Serial communication** 
+(default **baud rate** in **Serial Terminal** in **SimulIDE**) to 9600 and initialize the **Serial communication**.
+(To change the **baud rate** of the **Serial Terminal** in **SimulIDE** you can go to the properties of 
+that **Serial Terminal**).
+Now, we are ready to write something on it.
+To do so, we can use the code below:
+
+```cpp
+Serial.println("Hello World");
+```
+
+In the code above, we have printed `Hello World` into the serial port.
+The function `println`, prints the given input and makes a new line.
+Now, let's change our code in a way that it prints `Hello World` every one second.
+So we have the full code like below:
+
+```cpp
+#include <Arduino.h>
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  Serial.println("Hello World");
+  delay(1000);
+}
+```
+
+Let's upload it into our **SimulIDE**.
+After pressing start simulation, you should click on the **open** button on the **Serial Terminal**.
+Your output would be something like below:
+
+![Hello World Serial](hello-world-serial.gif)
+
+As you can see in the left panel **Hello World** is being printed constantly.
+Also, **Rx** on the terminal becomes **yellow** whenever it receives data.
