@@ -1,0 +1,13 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-80,-172" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="Users/ramin/Documents/PlatformIO/Projects/a4_adc/.pio/build/uno/firmware.hex" Auto_Load="true" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="SerialTerm" CircId="SerialTerm-10" mainComp="false" Show_id="false" Show_Val="false" Pos="-88,-248" rotation="0" hflip="1" vflip="1" label="SerialTerm-10" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="SerialTerm-10-pin0" endpinid="Uno-1-0" pointList="-112,-256,-124,-256,-124,-156,-72,-156" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="SerialTerm-10-pin1" endpinid="Uno-1-1" pointList="-112,-240,-116,-240,-116,-148,-72,-148" />
+
+</circuit>
