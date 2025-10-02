@@ -1,15 +1,15 @@
 ---
 date: '2025-10-01T08:37:00+03:30'
 draft: false
-title: 'Serial and Analog read'
-description: "Explaining about Serial port and Analog read in Arduino Uno"
+title: 'Serial'
+description: "Explaining about Serial communication and its usages"
 weight: 50
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
-image: "serial-analog-read.webp"
-code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/4-serial-analog-read"
+image: "serial-communication.webp"
+code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/4-serial-communication"
 ---
 
-# Serial and Analog read
+# Serial Communication
 
 ## Introduction
 
