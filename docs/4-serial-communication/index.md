@@ -207,3 +207,12 @@ Its job is to count down the number that it received to `0`.
 Your output should look like this:
 
 ![Two Arduinos](two-arduinos.gif)
+
+## Conclusion
+
+In this tutorial we walked through the concepts of **Serial Communication**.
+First, we explained the **Serial Communication**.
+Then, we provided an example on how to write with it.
+After that, we learned how to read from it.
+Next, we explained about `SoftwareSerial` and how to make other pins to work as a **Serial communication** pins.
+Finally, we provided an example with two arduinos to make you understand the concepts better.
