@@ -14,8 +14,7 @@ code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/4-ser
 ## Introduction
 
 In the previous tutorial, we learned how to work with **LCD** and **Keypad**.
-In this tutorial, at first, we are going to learn about **Serial Communication**.
-Then we are going to learn how to read **Analog** data in **Arduino** instead of only **0** and **1**.
+In this tutorial, we are going to learn about **Serial Communication** and some of its usages.
 
 ## Serial communication
 
@@ -32,7 +31,7 @@ of the devices that are trying to communicate.
 The reason that **baud rate** should be the same for both devices is that, we have an **asynchronous** communication.
 The start and the end of the communication are determined with **start bit** and **end bit**. 
 
-### Serial Terminal on SimulIDE
+## Serial Terminal on SimulIDE
 
 One of the ways that we can use **Serial communication** is by using a **Serial Terminal**.
 You can access a **Serial Terminal** in **Micro/Peripherals/Serial Terminal**.
@@ -46,7 +45,7 @@ You should have something like this:
 
 ![Serial Terminal](serial-terminal.webp)
 
-### Serial Hello World
+## Serial Hello World
 
 Now, let's create a **PlatformIO** project and write a **Hello World** for **Serial communication**.
 At first, let's initialize the **Serial Communication**.
@@ -96,7 +95,7 @@ Your output would be something like below:
 As you can see in the left panel **Hello World** is being printed constantly.
 Also, **Rx** on the terminal becomes **yellow** whenever it receives data.
 
-### Read from Serial Terminal
+## Read from Serial Terminal
 
 We have managed to send data to the **Serial Terminal**.
 Now, let's talk about how to read data from it.
@@ -125,7 +124,7 @@ After I wrote down each one of them I pressed **Enter**.
 As you can see in the right panel, we can see the input that we sent to
 the **Arduino** and in the left panel we can see the response of the **Arduino**.
 
-### Read until new line
+## Read until new line
 
 If we want to read the whole string, we can use a function called
 `Serial.readStringUntil`.
@@ -147,7 +146,7 @@ The output would be something like this:
 
 As you can see, we write a whole sentence and when we press enter after some time it would print us the result.
 
-### Built-it Serial Monitor in SimulIDE
+## Built-it Serial Monitor in SimulIDE
 
 For debugging purposes, **SimulIDE** has implemented a **Serial Monitor** that you can see
 the transmitted and received data through that.
