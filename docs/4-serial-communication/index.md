@@ -195,3 +195,15 @@ void loop()
 Your output should look like below:
 
 ![Software serial](software-serial.gif)
+
+## Counter on two Arduinos
+
+Now, that we know how two devices can communicate using **Serial communication**, let's connect two **Arduinos**
+together.
+We add a **Keypad** to the first **Arduino**.
+Its job is to receive a number and send it to the second Arduino.
+Then, we add an **LCD** to the second Arduino.
+Its job is to count down the number that it received to `0`.
+Your output should look like this:
+
+![Two Arduinos](two-arduinos.gif)
