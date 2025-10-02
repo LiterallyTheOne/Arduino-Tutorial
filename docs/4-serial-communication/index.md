@@ -152,3 +152,46 @@ For debugging purposes, **SimulIDE** has implemented a **Serial Monitor** that y
 the transmitted and received data through that.
 To access it, you can right-click on the **Arduino Uno** then select **mega328/Open Serial Monitor/USart**.
 
+## Software Serial
+
+The built-in pins for **Serial Communication** in **Arduino Uno** are **pin 0, 1**.
+This is managed by hardware.
+If you want to use other pins for the **Serial communication**, you should use a package called `SoftwareSerial`. 
+You can import it like below: 
+
+```cpp
+#include <SoftwareSerial.h>
+```
+
+To tell the `SoftwareSerial` which ports you need, you should make an object like below:
+
+```cpp
+SoftwareSerial mySerial(10, 11); // RX, TX
+```
+
+In the code above, we have used **pin 10** for **RX** and **pin 11** for **TX**.
+Now, we are ready to connect the device that we want to communicate with to **pin 10 and 11** and start our 
+**Serial communication** as we would before.
+The whole code for a **Hello World** example is like this:
+
+```cpp
+#include <Arduino.h>
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(10, 11); // RX, TX
+
+void setup()
+{
+  mySerial.begin(9600);
+}
+
+void loop()
+{
+  mySerial.println("Hello SoftwareSerial!");
+  delay(1000);
+}
+```
+
+Your output should look like below:
+
+![Software serial](software-serial.gif)
