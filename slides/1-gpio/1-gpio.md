@@ -22,7 +22,7 @@ By LiterallyTheOne
 
 ## 1: GPIO
 
-![bg right:33% w:400](qr_code_1.png)
+![bg right:33% w:400](qr-code-1.png)
 
 ---
 <!-- paginate: true -->
@@ -176,4 +176,4 @@ void loop()
 
 ## Link to the tutorial and materials
 
-![w:400](qr_code_1.png)
+![w:400](qr-code-1.png)

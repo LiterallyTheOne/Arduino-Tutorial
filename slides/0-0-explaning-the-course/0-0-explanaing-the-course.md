@@ -56,7 +56,7 @@ By LiterallyTheOne
 
 ## Material
 
-![bg right:33% w:400](qr_code_1.png)
+![bg right:33% w:400](qr-code-1.png)
 
 - <https://literallytheone.github.io/tutorials/arduino/docs/>
 
