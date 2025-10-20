@@ -2,7 +2,7 @@
 marp: true
 theme: uncover
 footer: By Ramin Zarebidoky (LiterallyTheOne)
-header: Arduino Tutorial, GPIO
+header: Arduino Tutorial, 7-segment
 size: 16:9
 ---
 
@@ -42,7 +42,7 @@ By LiterallyTheOne
 * Show numbers and letters
 * a to g + dp
 
-![bg right:33% w:400 h:600](../../docs/2-7-segment/7segment.webp)
+![bg right:33% w:300 h:500](../../docs/2-7-segment/7segment.webp)
 
 ---
 
