@@ -256,7 +256,7 @@ Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 * Gets the pressed key
 
 ```cpp
-getKey();
+keypad.getKey();
 ```
 
 * Example:

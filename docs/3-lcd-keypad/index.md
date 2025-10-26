@@ -284,7 +284,7 @@ If a key was pressed, it would return the respective key and if not it would ret
 Syntax:
 
 ```cpp
-getKey();
+keypad.getKey();
 ```
 
 Example:
