@@ -62,7 +62,7 @@ The result should be something like below:
 
 **Liquid Crystal** is a well-known package that helps us to work with **LCD**.
 This package contain so many great and useful functions.
-You can see the list of all functions in 
+You can see the list of all functions in
 [this link](https://docs.arduino.cc/libraries/liquidcrystal/).
 
 ### Add LiquidCrystal to PlatformIO
@@ -200,7 +200,7 @@ Here is an example of a **Keypad** in **SimulIDE**.
 
 Now, let's add a keypad to our **Arduino Uno** in our **SimulIDE**.
 We can access to the **Keypad** in **Switches/Keypad**.
-When you put it on the board, you can see there are **4 rows** and **3 columns**. 
+When you put it on the board, you can see there are **4 rows** and **3 columns**.
 Let's connect each row and column like below:
 
 * row-0: 0
@@ -290,7 +290,7 @@ getKey();
 Example:
 
 ```cpp
-char key = getKey();
+char key = keypad.getKey();
 ```
 
 ## Keypad to LCD
