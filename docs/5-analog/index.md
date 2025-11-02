@@ -28,4 +28,10 @@ and **1**.
 
 ![Analog Write](analog-write.gif)
 
+## Combining both
+
+![Combining Both](combining-both.webp)
+
+![Combining Both gif](combining-both.gif)
+
 ## Conclusion
