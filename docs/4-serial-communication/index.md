@@ -18,18 +18,18 @@ In this tutorial, we are going to learn about **Serial Communication** and some 
 
 ## Serial communication
 
-**Serial communication** is a way that a microcontroller can send and receive data one bit at a time. 
+**Serial communication** is a way that a microcontroller can send and receive data one bit at a time.
 You can use it to communicate with computers, microcontrollers, and modules (e.g., GPS, Bluetooth, ESP8266).
 **Serial communication** is one of the most important concepts in microcontrollers.
 **Arduino Uno** uses **UART** (Universal Asynchronous Receiver-Transmitter) to handle the **Serial communication**.
-**UART** needs two pins, one for receiving data (RX) and one for transmitting data (TX). 
+**UART** needs two pins, one for receiving data (RX) and one for transmitting data (TX).
 These two pins are available in **Arduino Uno** in **pin 0** (RX) and **pin 1** (TX).
 Also, we can have **Serial Communication** with **USB** as well.
 One of the most important things in having a **Serial Communication** is setting the correct **baud rate** for both
 of the devices that are trying to communicate.
 **Baud rate** indicates the speed of data transfer.
 The reason that **baud rate** should be the same for both devices is that, we have an **asynchronous** communication.
-The start and the end of the communication are determined with **start bit** and **end bit**. 
+The start and the end of the communication are determined with **start bit** and **end bit**.
 
 ## Serial Terminal on SimulIDE
 
@@ -55,9 +55,9 @@ To do so, we can use the code below:
 Serial.begin(9600);
 ```
 
-In the code above, we set the **baud rate** of our **Serial communication** 
+In the code above, we set the **baud rate** of our **Serial communication**
 (default **baud rate** in **Serial Terminal** in **SimulIDE**) to 9600 and initialize the **Serial communication**.
-(To change the **baud rate** of the **Serial Terminal** in **SimulIDE** you can go to the properties of 
+(To change the **baud rate** of the **Serial Terminal** in **SimulIDE** you can go to the properties of
 that **Serial Terminal**).
 Now, we are ready to write something on it.
 To do so, we can use the code below:
@@ -146,7 +146,7 @@ The output would be something like this:
 
 As you can see, we write a whole sentence and when we press enter after some time it would print us the result.
 
-## Built-it Serial Monitor in SimulIDE
+## Built-in Serial Monitor in SimulIDE
 
 For debugging purposes, **SimulIDE** has implemented a **Serial Monitor** that you can see
 the transmitted and received data through that.
@@ -156,8 +156,8 @@ To access it, you can right-click on the **Arduino Uno** then select **mega328/O
 
 The built-in pins for **Serial Communication** in **Arduino Uno** are **pin 0, 1**.
 This is managed by hardware.
-If you want to use other pins for the **Serial communication**, you should use a package called `SoftwareSerial`. 
-You can import it like below: 
+If you want to use other pins for the **Serial communication**, you should use a package called `SoftwareSerial`.
+You can import it like below:
 
 ```cpp
 #include <SoftwareSerial.h>
@@ -170,7 +170,7 @@ SoftwareSerial mySerial(10, 11); // RX, TX
 ```
 
 In the code above, we have used **pin 10** for **RX** and **pin 11** for **TX**.
-Now, we are ready to connect the device that we want to communicate with to **pin 10 and 11** and start our 
+Now, we are ready to connect the device that we want to communicate with to **pin 10 and 11** and start our
 **Serial communication** as we would before.
 The whole code for a **Hello World** example is like this:
 
