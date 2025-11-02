@@ -1,0 +1,15 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="124,-164" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../PlatformIO/Projects/5-analog-1/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Potentiometer" CircId="Potentiometer-2" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="344,-168" rotation="0" hflip="1" vflip="1" label="Potentiometer-2" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="1000 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Potentiometer-2-PinM" endpinid="Uno-1-A0" pointList="344,-152,344,-108,276,-108" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Potentiometer-2-PinA" endpinid="Uno-1-5V0" pointList="328,-168,308,-168,308,-68,276,-68" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Potentiometer-2-PinB" endpinid="Uno-1-GND1" pointList="360,-168,372,-168,372,-76,276,-76" />
+
+</circuit>
