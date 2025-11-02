@@ -32,6 +32,8 @@ and **1**.
 
 ![Analog Write gif](analog-write.gif)
 
+![Analog Write Oscope gif](analog-write-oscope.gif)
+
 ## Combining both
 
 ![Combining Both](combining-both.webp)
