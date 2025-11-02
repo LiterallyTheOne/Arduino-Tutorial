@@ -20,13 +20,17 @@ and **1**.
 
 ## Analog Read
 
-![Analog Read](analog-read.gif)
+![Analog Read](analog-read.webp)
+
+![Analog Read gif](analog-read.gif)
 
 ## PWM
 
 ## Analog Write
 
-![Analog Write](analog-write.gif)
+![Analog Write](analog-write.webp)
+
+![Analog Write gif](analog-write.gif)
 
 ## Combining both
 
