@@ -40,4 +40,6 @@ and **1**.
 
 ![Combining Both gif](combining-both.gif)
 
+![Combining Both Oscope gif](combining-both-oscope.gif)
+
 ## Conclusion
