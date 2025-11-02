@@ -18,4 +18,14 @@ We could only write and read **0** and **1** from a pin.
 In this tutorial, we will discuss how to write and read values between **0**
 and **1**.
 
+## Analog Read
+
+![Analog Read](analog-read.gif)
+
+## PWM
+
+## Analog Write
+
+![Analog Write](analog-write.gif)
+
 ## Conclusion
