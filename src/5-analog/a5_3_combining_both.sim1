@@ -4,12 +4,38 @@
 <mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../PlatformIO/Projects/5-analog-1/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
 </item>
 
-<item itemtype="Potentiometer" CircId="Potentiometer-2" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="344,-168" rotation="0" hflip="1" vflip="1" label="Potentiometer-2" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="1000 Ω" Slider="false" Scale="1" />
+<item itemtype="Potentiometer" CircId="Potentiometer-2" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="344,-168" rotation="0" hflip="1" vflip="1" label="Potentiometer-2" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="926 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Led" CircId="Led-4" mainComp="false" Show_id="false" Show_Val="false" Pos="48,-84" rotation="0" hflip="1" vflip="1" label="Led-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-5" mainComp="false" Show_id="false" Show_Val="false" Pos="92,-48" rotation="0" hflip="1" vflip="1" label="Ground-5" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-6" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="92,-124" rotation="0" hflip="1" vflip="1" label="Resistor-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Oscope" CircId="Oscope-7" mainComp="false" Show_id="false" Show_Val="false" Pos="188,-288" rotation="0" hflip="1" vflip="1" label="Oscope-7" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="1000000000" TimPos="0,0,0,0," VolDiv="1,1,1,1," Tunnels=",,,," Trigger="4" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0,0,0,0," />
+
+<item itemtype="Node" CircId="Node-8" mainComp="false" Pos="76,-84" />
+
+<item itemtype="Node" CircId="Node-9" mainComp="false" Pos="44,-124" />
 
 <item itemtype="Connector" uid="Connector-1" startpinid="Potentiometer-2-PinM" endpinid="Uno-1-A0" pointList="344,-152,344,-108,276,-108" />
 
 <item itemtype="Connector" uid="Connector-2" startpinid="Potentiometer-2-PinA" endpinid="Uno-1-5V0" pointList="328,-168,308,-168,308,-68,276,-68" />
 
 <item itemtype="Connector" uid="Connector-3" startpinid="Potentiometer-2-PinB" endpinid="Uno-1-GND1" pointList="360,-168,372,-168,372,-76,276,-76" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Uno-1-3" endpinid="Resistor-6-rPin" pointList="132,-124,108,-124" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="Oscope-7-PinG" endpinid="Node-8-1" pointList="100,-224,-48,-224,-48,-20,76,-20,76,-84" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="Led-4-rPin" endpinid="Node-8-0" pointList="64,-84,76,-84" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Node-8-2" endpinid="Ground-5-Gnd" pointList="76,-84,92,-84,92,-64" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Oscope-7-Pin0" endpinid="Node-9-1" pointList="100,-336,44,-336,44,-124" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Resistor-6-lPin" endpinid="Node-9-0" pointList="76,-124,44,-124" />
+
+<item itemtype="Connector" uid="Connector-15" startpinid="Node-9-2" endpinid="Led-4-lPin" pointList="44,-124,20,-124,20,-84,32,-84" />
 
 </circuit>
