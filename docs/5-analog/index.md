@@ -6,7 +6,7 @@ description: "Explaining about analog read and write"
 weight: 60
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
 image: "analog.webp"
-code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/4-serial-communication"
+code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/5-analog"
 ---
 
 # Analog
