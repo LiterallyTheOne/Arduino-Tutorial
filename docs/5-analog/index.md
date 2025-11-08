@@ -104,6 +104,18 @@ The output looks like as following:
 
 ## PWM
 
+Before we get to work with **Analog Write**, let's learn about **PWM**.
+Because **Arduino Uno** uses **PWM** to write **Analog** data.
+**PWM** (Pulse Width Modulation), is a technique for controlling the power delivered to a component.  
+In this technique we use different width of pulses in a signal.
+These signals switch between $0$ and $1$.
+The percentage of the time that a pulse is $1$ is called **duty cycle**.
+The pictures below show two examples of 100Hz **PWM**, one with the 30% duty cycle and the other 60%.
+
+![PWM 100hz 30d](pwm_100hz_30d.webp)
+
+![PWM 100hz 60d](pwm_100hz_60d.webp)
+
 ## Analog Write
 
 ![Analog Write](analog-write.webp)
