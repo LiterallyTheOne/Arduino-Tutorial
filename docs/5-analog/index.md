@@ -42,4 +42,10 @@ and **1**.
 
 ![Combining Both Oscope gif](combining-both-oscope.gif)
 
+## DC motor
+
+![DC Motor](dc-motor.webp)
+
+![DC Motor gif](dc-motor-gif.gif)
+
 ## Conclusion
