@@ -118,9 +118,61 @@ The pictures below show two examples of 100Hz **PWM**, one with the 30% duty cyc
 
 ## Analog Write
 
+Now, that we know about **PWM**, let's connect talk about writing analog data in **Arduino uno**.
+In **Arduino Uno** we have $6$ pins that we can create **PWM** on them.
+Including: $3$, $5$, $6$, $9$, $10$, and $11$
+These pins are shown in the board with a **~** beside them
+and in **SimulIDE** with **PWM**.
+To create our **duty cycles**, we can use the numbers in range $[0, 255]$.
+$255$ means $100%$ and $0$ means $0%$ duty cycles.
+
+For writing **digital** values, we had a function called `digitalWrite`.
+We have a similar function for **analog** values as well, and it is called:
+`analogWrite`.
+Their syntax is similar, with the exception that `analogWrite` accepts an
+integer for its second argument.
+
+Now, let's connect an **LED** to pin $3$.
+Your connection should look like below:
+
 ![Analog Write](analog-write.webp)
 
+Now, let's write a code to write analog data on pin $3$.
+
+```cpp
+#include <Arduino.h>
+
+void setup()
+{
+  pinMode(3, OUTPUT);
+}
+
+void loop()
+{
+  for (int i = 0; i < 256; i++)
+  {
+    analogWrite(3, i);
+    delay(10);
+  }
+}
+```
+
+In the code above, first we set the pin mode of pin 3 as output.
+Then, we have a for loop that starts from $0$ and goes until $256$.
+So, we expect the brightness of our **LED** changes from dark to light.
+As you can see in the output below, this is the exact thing that is happening.
+
 ![Analog Write gif](analog-write-gif.gif)
+
+If we want to see the **PWM** that we are generating, we can connect an
+**Oscope** to our output.
+To do so, we can follow these steps:
+
+* Put an **Oscope** on the board (**Meters/Oscope**)
+* Connect the bottom pin to the ground
+* Connect any other pin to the output of pin $3$.
+
+Your output should look like as following:
 
 ![Analog Write Oscope gif](analog-write-oscope.gif)
 
