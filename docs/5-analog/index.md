@@ -20,6 +20,52 @@ and **1**.
 
 ## Analog Read
 
+In the previous tutorials, we were working with **digital** input and output.
+As you recall, to read a **digital** input, we had a function called `digitalRead`.
+To read **analog** input, we have a function as well.
+This function is called `analogRead`.
+The syntax of it is pretty similar to the `digitalRead`, the only exception is that it returns a number
+in a range of $[0, 1023]$.
+As you might have guessed from the range, `Arduino Uno` allocates `10 bits` for reading analog data.
+
+In `Arduino Uno`, we have $6$ pins that we can use to read **Analog** input.
+These pins are labeled as **A0** to **A5**.
+In the image below, we show them by drawing a yello rectangle over them.
+
+![Analog pins](../1-gpio/arduino-gpio.webp)
+
+For reading digital values, $5V$ indicates $1$ and $0V$ indicates $0$.
+For analog values, $5V$ indicates $1023$ and $0V$ indicates $0$.
+As you can see, we divide the values between $5V$ and $0V$ into $1024$ parts.
+With using this technique, we are being able to read voltage between $5V$ and $0V$.
+
+### Potentiometer
+
+To create a voltage between $5V$ and $0V$, we can use a device called **Potentiometer**.
+You can find it at **Passive/Resistors/Potentiometer** in **SimulIDE**.
+As you can see, a **Potentiometer** has $3$ pins and a button to control the output voltage.
+**Potentiometer** creates voltage with increasing and decreasing the resistance. 
+Let's connect a **Potentiometer** to a fixed voltage to see how it works.
+To do so, we can follow these steps:
+
+* Put a **Potentiometer** on the board (**Passive/Resistors/Potentiometer**).
+* Connect the pin that is closer to a red line, to a **Fixed Voltage**.
+* Connect the other pin to the **Ground**.
+* Put a **VoltMeter** on the board (**Meters/VoltMeter**).
+* Connect the output pin of the **Potentiometer** (the pin with the arrow on it) to the **red pin** of the **VoltMeter**.
+* Connect the other pin of the **VoltMeter** (the pin beside the red pin) to the ground.
+
+Your connection, should look like as following:
+
+![Potentiometer](potentiometer.webp)
+
+Now, let's start the simulation and rotate the button on the **Potentiometer**.
+
+![Potentiometer gif](potentiometer-gif.gif)
+
+As you can see, we can make voltages between $5V$ and $0V$.
+
+
 ![Analog Read](analog-read.webp)
 
 ![Analog Read gif](analog-read-gif.gif)
