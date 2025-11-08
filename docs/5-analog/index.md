@@ -251,7 +251,32 @@ the output would look like below:
 
 ## Servo Motor
 
+**Servo motor** is a type of electric motor that is designed for precise control.
+It is widely used in robotics.
+We can control the position of the servo motor by sending a **PWM** signal to it.
+In this session, we will be using a simple DC servo motor which only take
+angles in range of [-90, 90].
+The desired `PWM` frequency for this servo motor is `50Hz`.
+This servo motor has three pins: VCC, GND, and signal.
+So, let's connect a **Servo motor** to an **Arduino Uno**.
+
+* Put a **Servo motor** on the board (**Outputs/Motors/Servo Motor**).
+
+
 ![Servo motor](servo-motor.webp)
+
+
+So, to control a **Servo motor** we need to create a **PWM** signal with the frequency **50hz**.
+To do so, we can use a library called **Servo**.
+We can add it to our **PlatformIO project like this:
+
+```ini
+lib_deps =
+        ...
+        arduino-libraries/Servo
+```
+
+Then we can include it
 
 ![Servo motor gif](servo-motor-gif.gif)
 
