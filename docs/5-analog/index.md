@@ -48,4 +48,10 @@ and **1**.
 
 ![DC Motor gif](dc-motor-gif.gif)
 
+## Servo Motor
+
+![Servo motor](servo-motor.webp)
+
+![Servo motor gif](servo-motor-gif.gif)
+
 ## Conclusion
