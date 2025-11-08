@@ -178,15 +178,74 @@ Your output should look like as following:
 
 ## Combining both
 
+Now, let's combine the both reading and writing analog values together.
+Your connection should look like below:
+
 ![Combining Both](combining-both.webp)
 
+Now, let's write a code that changes the brightness of the **LED**
+using the **Potentiometer**.
+
+```cpp
+#include <Arduino.h>
+
+void setup()
+{
+  pinMode(3, OUTPUT);
+}
+
+void loop()
+{
+  int our_input = analogRead(A0);
+  int brightness = map(our_input, 0, 1023, 0, 255);
+  analogWrite(3, brightness);
+  delay(1000);
+}
+```
+
+As you can see, in the code above, we read analog data from pin `A0`.
+The value is in the range of $[0, 1023]$.
+To write it on the pin $3$, we need to rescale the value to the range of $[0, 255]$.
+To do so, we have used a function called `map`.
+This function takes our input as its first argument, then takes the current range
+and the target range and outputs the rescaled value.
+After that, we are able to write that rescaled value to pin $3$.
+The output looks like as following:
+
 ![Combining Both gif](combining-both.gif)
+
+If we want to see the **PWM**, we can connect an **Oscope** like below:
 
 ![Combining Both Oscope gif](combining-both-oscope.gif)
 
 ## DC motor
 
+**DC motor** is a device that converts electrical energy into rotation.
+We use a **DC motor** in so many different things like, saw, drill, toys and e.t.c.
+To connect a **DC Motor** to an Arduino we should consider that, a **DC Motor**
+takes too much current, and we should not connect it directly to an **Arduino pin**.
+In **SimulIDE** it is not going to be a problem, but in real life we should not do that.
+To practice real life connection, we use a battery to power our **DC motor**.
+Also, we use a **Mosfet** to write analog data on our **DC motor**.
+Now, let's change our **LED** to a **DC motor** with these following steps:
+
+* Remove the **LED**
+* Put a **DC motor** on the board (**Outputs/Motors/DC Motor**).
+* Put a **Battery** on the board (**Sources/Battery**).
+* Put a **Mosfet** on the board (**Active/Transistor/Mosfet**).
+* Connect pin $3$ to the middle pin of the mosfet (pin with the arrow).
+* Connect one pin of the mosfet to the ground.
+* Connect the other pin of the mosfet to the negative (-) of the **DC Motor**.
+* Connect the positive (+) of the motor to the positive (red) of the battery.
+* Connect the negative (black) of the battery to the ground.
+
+Your connection should look like below:
+
 ![DC Motor](dc-motor.webp)
+
+There is no need to change our code.
+So, if we run our simulation with the code that we already have written for the **LED**,
+the output would look like below:
 
 ![DC Motor gif](dc-motor-gif.gif)
 
