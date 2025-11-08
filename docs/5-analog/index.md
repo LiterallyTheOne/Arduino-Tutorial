@@ -65,8 +65,40 @@ Now, let's start the simulation and rotate the button on the **Potentiometer**.
 
 As you can see, we can make voltages between $5V$ and $0V$.
 
+### Potentiometer and Arduino
+
+Now, let's connect our **Potentiometer** to the Arduino.
+The steps are pretty much the same.
+
+* Connect the pin closer to the red line to a **5V**. 
+* Connect the pin on the opposite of the red line to the **Ground**.
+* Connect the output pin (pin with an arrow on it) to **A0**.
+
+Your connection should look like this:
 
 ![Analog Read](analog-read.webp)
+
+Now, let's write a code to read the analog data.
+
+```cpp
+#include <Arduino.h>
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int our_input = analogRead(A0);
+  Serial.println(String(our_input));
+  delay(1000);
+}
+```
+
+The code above, reads the analog input from `A0`.
+Then, it prints the read value into Serial terminal.
+The output looks like as following:
 
 ![Analog Read gif](analog-read-gif.gif)
 
