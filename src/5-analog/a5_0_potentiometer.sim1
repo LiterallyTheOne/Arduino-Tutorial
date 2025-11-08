@@ -1,0 +1,23 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Potentiometer" CircId="Potentiometer-2" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-8,-132" rotation="0" hflip="1" vflip="1" label="Potentiometer-2" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="1000 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-3" mainComp="false" Show_id="false" Show_Val="false" Pos="-96,-132" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-3" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="100,-80" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Voltimeter" CircId="Voltimeter-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-92,-52" rotation="0" hflip="1" vflip="1" label="Voltimeter-5" idLabPos="-24,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-7" mainComp="false" Pos="64,-132" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Fixed Voltage-3-outnod" endpinid="Potentiometer-2-PinA" pointList="-80,-132,-24,-132" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Voltimeter-5-lPin" endpinid="Potentiometer-2-PinM" pointList="-100,-36,-100,-12,-8,-12,-8,-116" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="Voltimeter-5-rPin" endpinid="Node-7-1" pointList="-84,-36,-84,-28,64,-28,64,-132" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Potentiometer-2-PinB" endpinid="Node-7-0" pointList="8,-132,64,-132" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="Node-7-2" endpinid="Ground-4-Gnd" pointList="64,-132,100,-132,100,-96" />
+
+</circuit>
