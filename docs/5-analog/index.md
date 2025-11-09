@@ -312,4 +312,12 @@ like below:
 
 ![Servo motor oscope gif](servo-motor-oscope-gif.gif)
 
+## Combine All
+
+Now, let's combine all the things that I have learned.
+Your output should be like below:
+
+![Combine all gif](combine_all_gif.gif)
+
+
 ## Conclusion

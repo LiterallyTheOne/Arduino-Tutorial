@@ -1,0 +1,81 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="124,-164" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../PlatformIO/Projects/5-analog-1/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Potentiometer" CircId="Potentiometer-108" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="368,-148" rotation="0" hflip="1" vflip="1" label="Potentiometer-108" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="500 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-109" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="444,-148" rotation="0" hflip="1" vflip="1" label="Potentiometer-109" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="992 Ω" Slider="false" Scale="1" />
+
+<item itemtype="DcMotor" CircId="DcMotor-114" mainComp="false" Show_id="true" Show_Val="false" Pos="-140,-108" rotation="0" hflip="1" vflip="1" label="DcMotor-114" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Servo" CircId="Servo-115" mainComp="false" Show_id="true" Show_Val="false" Pos="8,-224" rotation="-90" hflip="1" vflip="1" label="Servo-115" idLabPos="-16,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" Speed="0.2 _s/60º" MinPulse="1000 _µs" MaxPulse="2000 _µs" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" />
+
+<item itemtype="Led" CircId="Led-120" mainComp="false" Show_id="false" Show_Val="false" Pos="76,-28" rotation="0" hflip="1" vflip="1" label="Led-120" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Mosfet" CircId="Mosfet-121" mainComp="false" Show_id="false" Show_Val="false" Pos="-56,-100" rotation="-90" hflip="1" vflip="1" label="Mosfet-121" idLabPos="18,0" labelrot="0" valLabPos="-16,20" valLabRot="0" P_Channel="false" Depletion="false" RDSon="1 Ω" Threshold="3 V" />
+
+<item itemtype="Battery" CircId="Battery-123" mainComp="false" Show_id="false" Show_Val="false" Pos="-136,32" rotation="0" hflip="1" vflip="1" label="Battery-123" idLabPos="-18,-22" labelrot="0" valLabPos="-10,10" valLabRot="0" Voltage="5 V" Resistance="1 mΩ" />
+
+<item itemtype="Resistor" CircId="Resistor-125" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="92,-52" rotation="0" hflip="1" vflip="1" label="Resistor-125" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Node" CircId="Node-110" mainComp="false" Pos="320,-68" />
+
+<item itemtype="Node" CircId="Node-111" mainComp="false" Pos="396,-76" />
+
+<item itemtype="Node" CircId="Node-122" mainComp="false" Pos="108,-28" />
+
+<item itemtype="Node" CircId="Node-124" mainComp="false" Pos="108,0" />
+
+<item itemtype="Node" CircId="Node-126" mainComp="false" Pos="8,32" />
+
+<item itemtype="Node" CircId="Node-127" mainComp="false" Pos="-200,-108" />
+
+<item itemtype="Connector" uid="Connector-210" startpinid="Potentiometer-108-PinM" endpinid="Uno-1-A0" pointList="368,-132,368,-108,276,-108" />
+
+<item itemtype="Connector" uid="Connector-211" startpinid="Potentiometer-109-PinM" endpinid="Uno-1-A1" pointList="444,-132,444,-116,276,-116" />
+
+<item itemtype="Connector" uid="Connector-214" startpinid="Potentiometer-109-PinA" endpinid="Node-110-1" pointList="428,-148,412,-148,412,-68,320,-68" />
+
+<item itemtype="Connector" uid="Connector-215" startpinid="Potentiometer-108-PinA" endpinid="Node-110-0" pointList="352,-148,320,-148,320,-68" />
+
+<item itemtype="Connector" uid="Connector-216" startpinid="Node-110-2" endpinid="Uno-1-5V0" pointList="320,-68,276,-68" />
+
+<item itemtype="Connector" uid="Connector-218" startpinid="Potentiometer-109-PinB" endpinid="Node-111-1" pointList="460,-148,468,-148,468,-76,396,-76" />
+
+<item itemtype="Connector" uid="Connector-219" startpinid="Potentiometer-108-PinB" endpinid="Node-111-0" pointList="384,-148,396,-148,396,-76" />
+
+<item itemtype="Connector" uid="Connector-220" startpinid="Node-111-2" endpinid="Uno-1-GND1" pointList="396,-76,276,-76" />
+
+<item itemtype="Connector" uid="Connector-225" startpinid="Mosfet-121-Dren" endpinid="DcMotor-114-rPin" pointList="-72,-108,-100,-108" />
+
+<item itemtype="Connector" uid="Connector-227" startpinid="Mosfet-121-Gate" endpinid="Uno-1-5" pointList="-56,-84,-56,-52,32,-52,32,-108,132,-108" />
+
+<item itemtype="Connector" uid="Connector-229" startpinid="Led-120-rPin" endpinid="Node-122-0" pointList="92,-28,108,-28" />
+
+<item itemtype="Connector" uid="Connector-230" startpinid="Node-122-2" endpinid="Uno-1-GND2" pointList="108,-28,132,-28" />
+
+<item itemtype="Connector" uid="Connector-234" startpinid="Node-124-2" endpinid="Node-122-1" pointList="108,0,108,-28" />
+
+<item itemtype="Connector" uid="Connector-235" startpinid="Led-120-lPin" endpinid="Resistor-125-lPin" pointList="60,-28,48,-28,48,-52,76,-52" />
+
+<item itemtype="Connector" uid="Connector-236" startpinid="Resistor-125-rPin" endpinid="Uno-1-11" pointList="108,-52,132,-52" />
+
+<item itemtype="Connector" uid="Connector-237" startpinid="Servo-115-in1" endpinid="Node-126-1" pointList="8,-176,8,32" />
+
+<item itemtype="Connector" uid="Connector-238" startpinid="Battery-123-rPin" endpinid="Node-126-0" pointList="-120,32,8,32" />
+
+<item itemtype="Connector" uid="Connector-239" startpinid="Node-126-2" endpinid="Node-124-1" pointList="8,32,108,32,108,0" />
+
+<item itemtype="Connector" uid="Connector-240" startpinid="Servo-115-in0" endpinid="Node-127-1" pointList="-8,-176,-8,-156,-200,-156,-200,-108" />
+
+<item itemtype="Connector" uid="Connector-241" startpinid="DcMotor-114-lPin" endpinid="Node-127-0" pointList="-180,-108,-200,-108" />
+
+<item itemtype="Connector" uid="Connector-242" startpinid="Node-127-2" endpinid="Battery-123-lPin" pointList="-200,-108,-200,32,-152,32" />
+
+<item itemtype="Connector" uid="Connector-250" startpinid="Servo-115-in2" endpinid="Uno-1-9" pointList="24,-176,24,-68,132,-68" />
+
+<item itemtype="Connector" uid="Connector-251" startpinid="Mosfet-121-Sour" endpinid="Node-124-0" pointList="-40,-108,0,-108,0,0,108,0" />
+
+</circuit>
