@@ -71,7 +71,7 @@ As you can see, we can make voltages between $5V$ and $0V$.
 Now, let's connect our **Potentiometer** to the Arduino.
 The steps are pretty much the same.
 
-* Connect the pin closer to the red line to a **5V**. 
+* Connect the pin closer to the red line to a **5V**.
 * Connect the pin on the opposite of the red line to the **Ground**.
 * Connect the output pin (pin with an arrow on it) to **A0**.
 
