@@ -44,7 +44,7 @@ With using this technique, we are being able to read voltage between $5V$ and $0
 To create a voltage between $5V$ and $0V$, we can use a device called **Potentiometer**.
 You can find it at **Passive/Resistors/Potentiometer** in **SimulIDE**.
 As you can see, a **Potentiometer** has $3$ pins and a button to control the output voltage.
-**Potentiometer** creates voltage with increasing and decreasing the resistance. 
+**Potentiometer** creates voltage with increasing and decreasing the resistance.
 Let's connect a **Potentiometer** to a fixed voltage to see how it works.
 To do so, we can follow these steps:
 
@@ -52,7 +52,8 @@ To do so, we can follow these steps:
 * Connect the pin that is closer to a red line, to a **Fixed Voltage**.
 * Connect the other pin to the **Ground**.
 * Put a **VoltMeter** on the board (**Meters/VoltMeter**).
-* Connect the output pin of the **Potentiometer** (the pin with the arrow on it) to the **red pin** of the **VoltMeter**.
+* Connect the output pin of the **Potentiometer** (the pin with the arrow on it)
+  to the **red pin** of the **VoltMeter**.
 * Connect the other pin of the **VoltMeter** (the pin beside the red pin) to the ground.
 
 Your connection, should look like as following:
@@ -272,8 +273,8 @@ We can add it to our **PlatformIO project like this:
 
 ```ini
 lib_deps =
-        ...
-        arduino-libraries/Servo
+    ...
+    arduino-libraries/Servo
 ```
 
 Then, we can include it like below:
