@@ -6,11 +6,17 @@
 
 <item itemtype="Battery" CircId="Battery-34" mainComp="false" Show_id="false" Show_Val="false" Pos="-292,-216" rotation="0" hflip="1" vflip="1" label="Battery-34" idLabPos="-18,-22" labelrot="0" valLabPos="-10,10" valLabRot="0" Voltage="5 V" Resistance="1 mΩ" />
 
-<item itemtype="Potentiometer" CircId="Potentiometer-36" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="400,-196" rotation="0" hflip="1" vflip="1" label="Potentiometer-36" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="350 Ω" Slider="false" Scale="1" />
+<item itemtype="Potentiometer" CircId="Potentiometer-36" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="400,-196" rotation="0" hflip="1" vflip="1" label="Potentiometer-36" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="1000 Ω" Slider="false" Scale="1" />
 
 <item itemtype="Servo" CircId="Servo-37" mainComp="false" Show_id="true" Show_Val="false" Pos="-68,-300" rotation="0" hflip="1" vflip="1" label="Servo-37" idLabPos="-16,-40" labelrot="0" valLabPos="-16,20" valLabRot="0" Speed="0.2 _s/60º" MinPulse="1000 _µs" MaxPulse="2000 _µs" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" />
 
+<item itemtype="Oscope" CircId="Oscope-39" mainComp="false" Show_id="false" Show_Val="false" Pos="144,-316" rotation="0" hflip="1" vflip="1" label="Oscope-39" idLabPos="-90,-100" labelrot="0" valLabPos="-16,20" valLabRot="0" Basic_X="135 _px" Basic_Y="135 _px" BufferSize="600000" connectGnd="true" InputImped="10 MΩ" TimDiv="1000000000" TimPos="0,0,0,0," VolDiv="1,1,1,1," Tunnels=",,,," Trigger="4" Filter="0.1 V" AutoSC="4" Tracks="1" HideCh="false,false,false,false," VolPos="0,0,0,0," />
+
 <item itemtype="Node" CircId="Node-38" mainComp="false" Pos="-192,-28" />
+
+<item itemtype="Node" CircId="Node-40" mainComp="false" Pos="-4,-28" />
+
+<item itemtype="Node" CircId="Node-41" mainComp="false" Pos="-12,-124" />
 
 <item itemtype="Connector" uid="Connector-46" startpinid="Potentiometer-36-PinM" endpinid="Uno-1-A0" pointList="400,-180,400,-108,276,-108" />
 
@@ -24,8 +30,16 @@
 
 <item itemtype="Connector" uid="Connector-54" startpinid="Battery-34-rPin" endpinid="Node-38-0" pointList="-276,-216,-236,-216,-236,-28,-192,-28" />
 
-<item itemtype="Connector" uid="Connector-55" startpinid="Node-38-2" endpinid="Uno-1-GND2" pointList="-192,-28,132,-28" />
+<item itemtype="Connector" uid="Connector-57" startpinid="Oscope-39-PinG" endpinid="Node-40-1" pointList="56,-252,-4,-252,-4,-28" />
 
-<item itemtype="Connector" uid="Connector-56" startpinid="Servo-37-in2" endpinid="Uno-1-3" pointList="-116,-284,-160,-284,-160,-124,132,-124" />
+<item itemtype="Connector" uid="Connector-58" startpinid="Node-38-2" endpinid="Node-40-0" pointList="-192,-28,-4,-28" />
+
+<item itemtype="Connector" uid="Connector-59" startpinid="Node-40-2" endpinid="Uno-1-GND2" pointList="-4,-28,132,-28" />
+
+<item itemtype="Connector" uid="Connector-60" startpinid="Oscope-39-Pin0" endpinid="Node-41-1" pointList="56,-364,-12,-364,-12,-124" />
+
+<item itemtype="Connector" uid="Connector-61" startpinid="Servo-37-in2" endpinid="Node-41-0" pointList="-116,-284,-160,-284,-160,-124,-12,-124" />
+
+<item itemtype="Connector" uid="Connector-62" startpinid="Node-41-2" endpinid="Uno-1-3" pointList="-12,-124,132,-124" />
 
 </circuit>
