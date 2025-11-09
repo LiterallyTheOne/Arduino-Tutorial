@@ -320,5 +320,11 @@ Your output should be like below:
 
 ![Combine all gif](combine_all_gif.gif)
 
-
 ## Conclusion
+
+In this tutorial, we have Learned about how to deal with **Analog** data in **Arduino Uno**.
+First, we learned about `analogRead`.
+Then, we introduced **PWM** and that **Arduino** uses **PWM** to write analog data using `analogWrite`. 
+After that, we have explained about two of the use cases of the `analogWrite`,
+which were **DC motor** and **Servo motor**.
+Finally, we combined all the things that we have learned so far.
