@@ -119,7 +119,7 @@ The pictures below show two examples of 100Hz **PWM**, one with the 30% duty cyc
 
 ## Analog Write
 
-Now, that we know about **PWM**, let's connect talk about writing analog data in **Arduino uno**.
+Now, that we know about **PWM**, let's talk about writing analog data in **Arduino uno**.
 In **Arduino Uno** we have $6$ pins that we can create **PWM** on them.
 Including: $3$, $5$, $6$, $9$, $10$, and $11$
 These pins are shown in the board with a **~** beside them
@@ -324,7 +324,7 @@ Your output should be like below:
 
 In this tutorial, we have Learned about how to deal with **Analog** data in **Arduino Uno**.
 First, we learned about `analogRead`.
-Then, we introduced **PWM** and that **Arduino** uses **PWM** to write analog data using `analogWrite`. 
+Then, we introduced **PWM** and that **Arduino** uses **PWM** to write analog data using `analogWrite`.
 After that, we have explained about two of the use cases of the `analogWrite`,
 which were **DC motor** and **Servo motor**.
 Finally, we combined all the things that we have learned so far.
