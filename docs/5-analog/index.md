@@ -263,9 +263,7 @@ So, let's connect a **Servo motor** to an **Arduino Uno**.
 
 * Put a **Servo motor** on the board (**Outputs/Motors/Servo Motor**).
 
-
 ![Servo motor](servo-motor.webp)
-
 
 So, to control a **Servo motor** we need to create a **PWM** signal with the frequency **50hz**.
 To do so, we can use a library called **Servo**.
