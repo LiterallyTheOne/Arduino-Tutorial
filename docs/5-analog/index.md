@@ -276,8 +276,40 @@ lib_deps =
         arduino-libraries/Servo
 ```
 
-Then we can include it
+Then, we can include it like below:
+
+```cpp
+#include <Servo.h>
+```
+
+Now, we should create an object of `Servo` like below:
+
+```cpp
+Servo my_servo;
+```
+
+Then, we need to do the initialization by using a function called `attach`.
+For example, let's attach our servo to pin $3$.
+
+```cpp
+my_servo.attach(3);
+```
+
+Then we can use the `write` function to write the angle that we want.
+For example let's write $45$ on it.
+
+```cpp
+my_servo.write(45);
+```
+
+Now, write a code that maps the data of the **Potentiometer** to the servo angles.
+Your output should look like as following:
 
 ![Servo motor gif](servo-motor-gif.gif)
+
+If we want to see the generated **PWM**, we can add a **Oscope**
+like below:
+
+![Servo motor oscope gif](servo-motor-oscope-gif.gif)
 
 ## Conclusion
