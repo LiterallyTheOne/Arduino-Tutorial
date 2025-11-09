@@ -315,6 +315,8 @@ like below:
 ## Combine All
 
 Now, let's combine all the things that I have learned.
+We need two **Potentiometers**, one for controlling the **Servo motor** and the other one for controlling
+the speed of **DC motor** and the brightness of the **LED**.
 Your output should be like below:
 
 ![Combine all gif](combine_all_gif.gif)
