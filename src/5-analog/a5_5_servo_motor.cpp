@@ -11,7 +11,7 @@ void setup()
 void loop()
 {
   int our_input = analogRead(A0);
-  int angle = map(our_input, 0, 1023, -90, 90);
+  int angle = map(our_input, 0, 1023, 0, 180);
   my_servo.write(angle);
   delay(1000);
 }
