@@ -13,4 +13,10 @@ code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/6-int
 
 ## Introduction
 
+In the previous session, we learned how to work with analog values in **Arduino Uno**.
+In this session we will learn about one of the most important aspects of microcontrollers,
+which is called **Interrupt**.
+We have different kinds of **Interrupts**, but in this tutorial, we are going to focus on the **External Interrupt**,
+which we will explain very soon.
+
 ## Conclusion
