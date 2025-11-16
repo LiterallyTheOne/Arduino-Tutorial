@@ -209,4 +209,11 @@ Take note that you might need to use **volatile**.
 
 ![Reset with Interrupt](reset-with-interrupt.gif)
 
+## Increment pattern
+
+Now, make LEDs with the pattern below.
+Make sure that the both interrupts work as intended (one for pausing and one for resetting).
+
+![Increment Pattern](increment-pattern.gif)
+
 ## Conclusion
