@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
+int led_pins[8] = {6, 7, 8, 9, 10, 11, 12, 13};
+
 uint8_t a = 0;
 
 int x = 1;
-
-int led_pins[8] = {6, 7, 8, 9, 10, 11, 12, 13};
 
 void isr_stop()
 {

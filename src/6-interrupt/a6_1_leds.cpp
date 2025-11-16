@@ -1,23 +1,23 @@
 #include <Arduino.h>
 
-int current_led = 6;
+int led_pins[8] = {6, 7, 8, 9, 10, 11, 12, 13};
+
+int current_led = 0;
 
 void setup()
 {
-  for (int i = 6; i < 14; i++)
+  for (int i = 0; i < 8; i++)
   {
-    pinMode(i, OUTPUT);
+    pinMode(led_pins[i], OUTPUT);
   }
 }
 
 void loop()
 {
-  digitalWrite(current_led, HIGH);
+  digitalWrite(led_pins[current_led], HIGH);
   delay(200);
-  digitalWrite(current_led, LOW);
+  digitalWrite(led_pins[current_led], LOW);
+
   current_led++;
-  if (current_led > 13)
-  {
-    current_led = 6;
-  }
+  current_led %= 8;
 }
