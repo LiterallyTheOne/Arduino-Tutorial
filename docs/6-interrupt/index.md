@@ -19,4 +19,13 @@ which is called **Interrupt**.
 We have different kinds of **Interrupts**, but in this tutorial, we are going to focus on the **External Interrupt**,
 which we will explain very soon.
 
+## What is an External Interrupt?
+
+**Interrupt** is a special signal. 
+It tells the microcontroller to stop (halt) what he is doing right now and execute the given code.
+This code, should be in a function called **Interrupt Service Routine Function**.
+In **Arduino Uno**, we have 2 external **interrupts**.
+These **interrupts** are connected to **pin 2** and **pin 3**.
+So, if we want to work with these interrupts, we should connect a button to one of these two pins.
+
 ## Conclusion
