@@ -191,4 +191,22 @@ And this is going to be our output:
 
 ![led pause gif](led-pause-gif.gif)
 
+## Volatile in Cpp
+
+When we define a variable in **Cpp**, its compiler tends to optimize the usage of it.
+Sometimes, this optimization would work against us, specially in **Interrupt Service Routines**.
+Because **ISR** is a hardware event and **Cpp** might not plan for it.
+To prevent this optimization from happening we can use a keyword called **volatile**.
+We should put this keyword before the declaration of our variable.
+For example, `volatile int v;`.
+This keyword tells **Cpp** not to apply optimization on this variable.
+
+## Reset with Interrupt
+
+Now, add another interrupt to **pin 3**.
+This interrupt would reset the routine from the start.
+Take note that you might need to use **volatile**.
+
+![Reset with Interrupt](reset-with-interrupt.gif)
+
 ## Conclusion
