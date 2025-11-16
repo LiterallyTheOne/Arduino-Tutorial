@@ -216,4 +216,11 @@ Make sure that the both interrupts work as intended (one for pausing and one for
 
 ![Increment Pattern](increment-pattern.gif)
 
+## LEDs dance
+
+Let's make another routine like below.
+Again, make sure that the both interrupts work as intended.
+
+![LEDs dance](leds-dance.gif)
+
 ## Conclusion
