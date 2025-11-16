@@ -224,3 +224,11 @@ Again, make sure that the both interrupts work as intended.
 ![LEDs dance](leds-dance.gif)
 
 ## Conclusion
+
+In this tutorial, we have learned how to work with **External Interrupts**
+First, we explained what **External Interrupt** really is.
+Then, we set up a routine to understand the effect of an **Interrupt**.
+After that, we learned how to configure an **Interrupt** in **Arduino Uno** and saw how an **Interrupt** works.
+We explained about **volatile** in **Cpp** and why it's necessary to declare some variables as **volatile**. 
+Then, We added another **Interrupt**.
+Finally, we have made two more routines to understand the concepts better.
