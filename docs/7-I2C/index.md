@@ -84,6 +84,28 @@ To set up the **I2C** communication, we can use `.begin()` function, like below:
 Wire.begin();
 ```
 
+After doing that, we can start a communication with a **slave** in two ways:
+
+* **write**
+* **read**
+
+To start a communication with a **slave** in order to **write**, we can use the code below:
+
+```cpp
+Wire.beginTransmission(addr);   // start the communication in order to write with the slave with the address of `addr`
+Wire.write(data);               // write data
+Wire.endTransmission();         // finish transmission
+```
+
+If we want to our communication to be a **read** communication, we can
+
+```cpp
+Wire.requestFrom(addr, number); // start a read communication with the slave with the address of `addr` and read `number` bytes
+Wire.read();                    // read bytes
+```
+
+Let's connect an **I2C** component to the **Arduino** and check these functions.
+
 ## Temperature: DS1621
 
 ## Finding I2C address
