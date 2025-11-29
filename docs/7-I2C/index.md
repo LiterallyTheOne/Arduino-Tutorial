@@ -13,6 +13,9 @@ code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/7-I2C
 
 ## Introduction
 
+In the previous Tutorial, we learned about **Interrupt**.
+In this tutorial we will learn about **I2C** communication.
+
 ## I2C Communication
 
 ## OLED: SSD1306
