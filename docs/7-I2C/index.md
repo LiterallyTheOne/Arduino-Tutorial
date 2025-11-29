@@ -13,4 +13,20 @@ code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/7-I2C
 
 ## Introduction
 
+## I2C Communication
+
+## OLED: SSD1306
+
+## Finding I2C address
+
+## Temperature: DS1621
+
+## Clock: DS1307
+
+## LCD: Aip31068
+
+## Arduino as an I2C Slave
+
+## Project
+
 ## Conclusion
