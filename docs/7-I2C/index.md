@@ -106,6 +106,14 @@ Wire.read();                    // read bytes
 
 Let's connect an **I2C** component to the **Arduino** and check these functions.
 
+## Clock: DS1307
+
+## Finding I2C address
+
+## OLED: SSD1306
+
+## LCD: Aip31068
+
 ## Temperature: DS1621
 
 ![DS1621](temperature_ds1621.webp)
@@ -119,14 +127,6 @@ Let's connect an **I2C** component to the **Arduino** and check these functions.
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf)
 > [Command Table](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=10.84)
 > [Configuration registers](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=5.58)
-
-## Finding I2C address
-
-## OLED: SSD1306
-
-## Clock: DS1307
-
-## LCD: Aip31068
 
 ## Arduino as an I2C Slave
 
