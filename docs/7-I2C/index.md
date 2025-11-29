@@ -108,6 +108,8 @@ Let's connect an **I2C** component to the **Arduino** and check these functions.
 
 ## Temperature: DS1621
 
+![DS1621](temperature_ds1621.webp)
+
 ## Finding I2C address
 
 ## OLED: SSD1306
