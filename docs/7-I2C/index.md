@@ -110,6 +110,10 @@ Let's connect an **I2C** component to the **Arduino** and check these functions.
 
 ![DS1621](temperature_ds1621.webp)
 
+![Command Table](command-table.webp)
+
+![Register byte](register-configuration.webp)
+
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf)
 > [Command Table](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=10.84)
 > [Configuration registers](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=5.58)
