@@ -62,6 +62,13 @@ Then, whoever receives the data, should set the acknowledgement bit to `0`.
 These byte transfer and acknowledgement can be repeated multiple times, until a stop signal.
 Stop signal can be created when we put the SDA to `1`.
 
+To have a **I2C** communication in **Arduino** uno, we should use these pins:
+
+| signal  | pin  |
+|---------|------|
+| **SDA** | `A4` |
+| **SCL** | `A5` |
+
 ## Wire
 
 To control the **I2C** communication, **Arduino** has a library called `Wire`.
