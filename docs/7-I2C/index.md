@@ -106,9 +106,44 @@ Wire.read();                    // read bytes
 
 Let's connect an **I2C** component to the **Arduino** and check these functions.
 
+## Finding I2C address
+
+* Connect the clock
+* write the code
+* Explain the code
+* end transmission = 0
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+
+void setup()
+{
+  Wire.begin();
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  for (int i = 0; i < 127; i++)
+  {
+    Wire.beginTransmission(i);
+    if (Wire.endTransmission() == 0)
+    {
+      Serial.println("Device found at address: 0x" + String(i, HEX));
+    }
+  }
+  delay(2000);
+}
+```
+
 ## Clock: DS1307
 
-## Finding I2C address
+* Storing: 0x22 -> 22 not 2*16+2
+* seconds, minutes, hours, weekday, day, month, year
+* SQW
+
+> [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
 
 ## OLED: SSD1306
 
