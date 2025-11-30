@@ -159,6 +159,10 @@ void loop()
 
 ## OLED: SSD1306
 
+![OLED](oled.webp)
+
+![OLED gif](oled-gif.gif)
+
 ## LCD: Aip31068
 
 ## Temperature: DS1621
