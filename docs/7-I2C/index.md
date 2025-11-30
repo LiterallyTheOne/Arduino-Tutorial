@@ -143,7 +143,8 @@ void loop()
 
 * Storing: 0x22 -> 22 not 2*16+2
 * seconds, minutes, hours, weekday, day, month, year
-* SQW
+* SQW: Square Wave Output
+  * Good for creating interrupts
 
 | Register     | Address |
 |--------------|---------|
