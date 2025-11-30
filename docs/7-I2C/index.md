@@ -143,6 +143,16 @@ void loop()
 * seconds, minutes, hours, weekday, day, month, year
 * SQW
 
+| Register     | Address |
+|--------------|---------|
+| Seconds      | 0x00    |
+| Minutes      | 0x01    |
+| Hours        | 0x02    |
+| Day of Week  | 0x03    |
+| Day of Month | 0x04    |
+| Month        | 0x05    |
+| Year         | 0x06    |
+
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
 
 ## OLED: SSD1306
