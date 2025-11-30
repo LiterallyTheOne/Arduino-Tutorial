@@ -177,7 +177,9 @@ void loop()
 ![output of temperature](output-of-temperature.webp)
 
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf)
+> 
 > [Command Table](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=10.84)
+> 
 > [Configuration registers](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=5.58)
 
 ## Arduino as an I2C Slave
