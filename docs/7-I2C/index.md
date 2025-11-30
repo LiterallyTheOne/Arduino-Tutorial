@@ -160,9 +160,51 @@ void loop()
 
 ## OLED: SSD1306
 
+```ini
+lib_deps =
+    Adafruit SSD1306
+    Adafruit GFX Library
+```
+
+```cpp
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+```
+
+```cpp
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
+```
+
+```cpp
+if (!display.begin(SSD1306_SWITCHCAPVCC, SSD1306_ADDRESS))
+{
+Serial.println("SSD1306 failed!");
+for (;;)
+  ;
+}
+
+display.setTextSize(1);
+display.setTextColor(WHITE, BLACK);
+```
+
+```cpp
+display.clearDisplay();
+display.setCursor(0, 0);
+```
+
+```cpp
+display.print();
+display.display();
+```
+
 ![OLED](oled.webp)
 
 ![OLED gif](oled-gif.gif)
+
+> [Good Example](https://github.com/adafruit/Adafruit_SSD1306/blob/master/examples/ssd1306_128x64_i2c/ssd1306_128x64_i2c.ino)
 
 ## LCD: Aip31068
 
