@@ -5,6 +5,7 @@
 
 #define TIME_READ 7
 
+// seconds, minutes, hours, weekday, day, month, year
 byte time[TIME_READ];
 
 void read_date_and_time()
@@ -33,7 +34,9 @@ void loop()
 
   for (int i = 0; i < TIME_READ; i++)
   {
-    Serial.print(String(time[i], HEX) + " ");
+    int time_int = 0;
+    time_int = (time[i] / 16) * 10 + time[i] % 16;
+    Serial.print(String(time_int) + " ");
   }
   Serial.println();
 
