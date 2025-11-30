@@ -113,6 +113,8 @@ Let's connect an **I2C** component to the **Arduino** and check these functions.
 * Explain the code
 * end transmission = 0
 
+![add-clock](add-clock.webp)
+
 ```cpp
 #include <Arduino.h>
 #include <Wire.h>
