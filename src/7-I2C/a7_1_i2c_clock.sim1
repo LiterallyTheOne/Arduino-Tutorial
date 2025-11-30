@@ -1,0 +1,13 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-152" rotation="0" hflip="1" vflip="1" label="Uno-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../PlatformIO/Projects/a7-i2c/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="DS1307" CircId="DS1307-6" mainComp="false" Show_id="false" Show_Val="false" Pos="92,-116" rotation="0" hflip="1" vflip="1" label="DS1307-6" idLabPos="-20,-34" labelrot="0" valLabPos="-16,20" valLabRot="0" Time_Updtd="true" />
+
+<item itemtype="Connector" uid="Connector-72" startpinid="DS1307-6-PinSCL" endpinid="Uno-2-A5" pointList="56,-120,-24,-120,-24,-136,-60,-136" />
+
+<item itemtype="Connector" uid="Connector-73" startpinid="DS1307-6-PinSDA" endpinid="Uno-2-A4" pointList="56,-128,-60,-128" />
+
+</circuit>
