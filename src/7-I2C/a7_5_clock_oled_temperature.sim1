@@ -1,0 +1,41 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-212,-152" rotation="0" hflip="1" vflip="1" label="Uno-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../PlatformIO/Projects/a7-i2c/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="DS1307" CircId="DS1307-6" mainComp="false" Show_id="false" Show_Val="false" Pos="92,-116" rotation="0" hflip="1" vflip="1" label="DS1307-6" idLabPos="-20,-34" labelrot="0" valLabPos="-16,20" valLabRot="0" Time_Updtd="false" />
+
+<item itemtype="Ssd1306" CircId="Ssd1306-7" mainComp="false" Show_id="true" Show_Val="false" Pos="48,-252" rotation="0" hflip="1" vflip="1" label="Ssd1306-7" idLabPos="-32,-60" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Width="128 _px" Height="64 _px" Rotate="true" Control_Code="60" Frequency="100 _kHz" />
+
+<item itemtype="DS1621" CircId="DS1621-14" mainComp="false" Show_id="false" Show_Val="false" Pos="84,-44" rotation="0" hflip="1" vflip="1" label="DS1621-14" idLabPos="-24,-28" labelrot="0" valLabPos="-16,20" valLabRot="0" Temp="23.5 °C" TempInc="0.5 °C" />
+
+<item itemtype="Node" CircId="Node-10" mainComp="false" Pos="-36,-136" />
+
+<item itemtype="Node" CircId="Node-11" mainComp="false" Pos="8,-128" />
+
+<item itemtype="Node" CircId="Node-15" mainComp="false" Pos="20,-128" />
+
+<item itemtype="Node" CircId="Node-16" mainComp="false" Pos="-12,-120" />
+
+<item itemtype="Connector" uid="Connector-82" startpinid="Ssd1306-7-PinSck" endpinid="Node-10-1" pointList="0,-204,0,-172,-36,-172,-36,-136" />
+
+<item itemtype="Connector" uid="Connector-84" startpinid="Node-10-2" endpinid="Uno-2-A5" pointList="-36,-136,-60,-136" />
+
+<item itemtype="Connector" uid="Connector-85" startpinid="Ssd1306-7-PinSda" endpinid="Node-11-1" pointList="8,-204,8,-128" />
+
+<item itemtype="Connector" uid="Connector-87" startpinid="Node-11-2" endpinid="Uno-2-A4" pointList="8,-128,-60,-128" />
+
+<item itemtype="Connector" uid="Connector-88" startpinid="DS1621-14-in0" endpinid="Node-15-1" pointList="52,-52,20,-52,20,-128" />
+
+<item itemtype="Connector" uid="Connector-89" startpinid="DS1307-6-PinSDA" endpinid="Node-15-0" pointList="56,-128,20,-128" />
+
+<item itemtype="Connector" uid="Connector-90" startpinid="Node-15-2" endpinid="Node-11-0" pointList="20,-128,8,-128" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="DS1621-14-in1" endpinid="Node-16-1" pointList="52,-44,-12,-44,-12,-120" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="DS1307-6-PinSCL" endpinid="Node-16-0" pointList="56,-120,-12,-120" />
+
+<item itemtype="Connector" uid="Connector-93" startpinid="Node-16-2" endpinid="Node-10-0" pointList="-12,-120,-24,-120,-24,-136,-36,-136" />
+
+</circuit>
