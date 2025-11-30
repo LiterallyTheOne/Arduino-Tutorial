@@ -7,7 +7,7 @@
 
 byte time[TIME_READ];
 
-void readDateTime()
+void read_date_and_time()
 {
   Wire.beginTransmission(DS1307_ADDRESS);
   Wire.write(0x00);
@@ -29,7 +29,7 @@ void setup()
 
 void loop()
 {
-  readDateTime();
+  read_date_and_time();
 
   for (int i = 0; i < TIME_READ; i++)
   {
