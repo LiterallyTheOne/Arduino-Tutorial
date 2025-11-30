@@ -224,6 +224,9 @@ display.display();
 >
 > [Configuration registers](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=5.58)
 
+![temperature OLED](temperature-oled.webp)
+![temperature OLED gif](temperature-oled-gif.gif)
+
 ## Arduino as an I2C Slave
 
 ## Project
