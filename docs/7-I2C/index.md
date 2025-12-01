@@ -234,4 +234,8 @@ display.display();
 
 ## Project
 
+![oled ball](oled-ball.gif)
+
+![OLED Ball line](oled-ball-line.gif)
+
 ## Conclusion
