@@ -144,7 +144,7 @@ void loop()
 * Storing: 0x22 -> 22 not 2*16+2
 * seconds, minutes, hours, weekday, day, month, year
 * SQW: Square Wave Output
-    * Good for creating interrupts
+  * Good for creating interrupts
 
 | Register     | Address |
 |--------------|---------|
@@ -155,6 +155,9 @@ void loop()
 | Day of Month | 0x04    |
 | Month        | 0x05    |
 | Year         | 0x06    |
+
+![clock output read](clock-output-read.gif)
+![clock output write](clock-output-write.gif)
 
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
 
