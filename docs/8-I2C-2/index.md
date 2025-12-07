@@ -20,7 +20,7 @@ let's work with another component and define an **Arduino** as a **slave**.
 
 ## Temperature: DS1621
 
-![DS1621](temperature_ds1621.webp)
+![DS1621](temperature-ds1621.webp)
 
 ![Command Table](command-table.webp)
 
