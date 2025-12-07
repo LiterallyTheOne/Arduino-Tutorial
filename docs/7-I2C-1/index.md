@@ -209,29 +209,6 @@ display.display();
 
 > [Good Example](https://github.com/adafruit/Adafruit_SSD1306/blob/master/examples/ssd1306_128x64_i2c/ssd1306_128x64_i2c.ino)
 
-## LCD: Aip31068
-
-## Temperature: DS1621
-
-![DS1621](temperature_ds1621.webp)
-
-![Command Table](command-table.webp)
-
-![Register byte](register-configuration.webp)
-
-![output of temperature](output-of-temperature.webp)
-
-> [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf)
->
-> [Command Table](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=10.84)
->
-> [Configuration registers](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=5.58)
-
-![temperature OLED](temperature-oled.webp)
-![temperature OLED gif](temperature-oled-gif.gif)
-
-## Arduino as an I2C Slave
-
 ## Project
 
 ![oled ball](oled-ball.gif)
