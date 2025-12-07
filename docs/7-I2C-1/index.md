@@ -1,8 +1,8 @@
 ---
 date: '2025-11-29T09:30:00+03:30'
 draft: false
-title: 'I2C'
-description: "Explaining about Inter-Integrated Circuit (I2C)"
+title: 'I2C: Part1'
+description: "First part of Explaining about Inter-Integrated Circuit (I2C)"
 weight: 80
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
 image: "I2C-part1.webp"
