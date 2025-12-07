@@ -39,6 +39,9 @@ let's work with another component and define an **Arduino** as a **slave**.
 
 ## Arduino as an I2C Slave
 
+* `onRequest`
+* `onReceive`
+
 ![Arduino slave temperature](arudino-slave-temperature.webp)
 
 ![Arduino slave temperature gif](arudino-slave-temperature-gif.gif)
