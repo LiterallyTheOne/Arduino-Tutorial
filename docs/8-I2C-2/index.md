@@ -13,6 +13,11 @@ code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/8-I2C
 
 ## Introduction
 
+In the previous tutorial, we learned about the **I2C Communication**.
+Also, we introduced two components and learned how to communicate with them.
+To understand this way of communication better,
+let's work with another component and define an **Arduino** as a **slave**.
+
 ## Temperature: DS1621
 
 ![DS1621](temperature_ds1621.webp)
