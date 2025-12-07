@@ -1,0 +1,57 @@
+#include <Arduino.h>
+#include <Wire.h>
+
+#define DS1621_ADDRESS 0x48
+
+float read_temperature()
+{
+  Wire.beginTransmission(DS1621_ADDRESS);
+  Wire.write(0xAA);
+  Wire.endTransmission();
+
+  Wire.requestFrom(DS1621_ADDRESS, 2);
+  byte temp_msb = Wire.read();
+  byte temp_lsb = Wire.read();
+
+  float result = temp_msb;
+  if (temp_lsb & 0x80)
+  {
+    result += 0.5;
+  }
+  return result;
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  Wire.begin();
+
+  for (int i = 0; i < 127; i++)
+  {
+    Wire.beginTransmission(i);
+    if (Wire.endTransmission() == 0)
+    {
+      Serial.println("Device found at address: 0x" + String(i, HEX));
+    }
+  }
+
+  Wire.beginTransmission(DS1621_ADDRESS);
+  Wire.write(0xEE);
+  Wire.endTransmission();
+
+  Wire.beginTransmission(DS1621_ADDRESS);
+  Wire.write(0xAC);
+  Wire.write(0x00);
+  Wire.endTransmission();
+
+  delay(200);
+}
+
+void loop()
+{
+  float temperature = read_temperature();
+
+  Serial.println(String(temperature) + " C");
+
+  delay(1000);
+}
