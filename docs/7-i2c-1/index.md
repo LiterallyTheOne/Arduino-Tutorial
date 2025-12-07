@@ -5,8 +5,8 @@ title: 'I2C: Part1'
 description: "First part of Explaining about Inter-Integrated Circuit (I2C)"
 weight: 80
 tags: [ "Arduino", "Cpp", "PlatformIO" ]
-image: "I2C-part1.webp"
-code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/7-I2C-1"
+image: "i2c-part1.webp"
+code: "https://github.com/LiterallyTheOne/Arduino-Tutorial/blob/master/src/7-i2c-1"
 ---
 
 # I2C: part 1
