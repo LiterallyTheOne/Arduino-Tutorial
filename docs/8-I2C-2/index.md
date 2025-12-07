@@ -46,6 +46,6 @@ let's work with another component and define an **Arduino** as a **slave**.
 
 ![Arduino slave temperature gif](arudino-slave-temperature-gif.gif)
 
-## LCD: Aip31068
+![Arduino slave temperature request gif](arduino-slave-temperature-request-gif.gif)
 
 ## Conclusion
