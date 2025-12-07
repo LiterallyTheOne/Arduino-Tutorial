@@ -60,7 +60,6 @@ void loop()
   {
     Wire.write(str_temp[i]);
   }
-  Wire.write('\n');
   Wire.endTransmission();
 
   delay(1000);
