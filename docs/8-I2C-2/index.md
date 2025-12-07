@@ -34,6 +34,9 @@ let's work with another component and define an **Arduino** as a **slave**.
 >
 > [Configuration registers](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=5.58)
 
+![temperature setup](temperature-setup.webp)
+![temperature output gif](temperature-output-gif.gif)
+
 ## Arduino as an I2C Slave
 
 ## LCD: Aip31068
