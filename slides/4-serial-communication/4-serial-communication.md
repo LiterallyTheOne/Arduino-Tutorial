@@ -1,7 +1,6 @@
 ---
 marp: true
 theme: uncover
-class: invert
 footer: By Ramin Zarebidoky (LiterallyTheOne)
 header: Arduino Tutorial, Serial Communication
 size: 16:9
