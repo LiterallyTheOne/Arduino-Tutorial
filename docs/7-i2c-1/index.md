@@ -158,10 +158,12 @@ If we only have the clock connected, the output would be `0x68`.
 
 ## Clock: DS1307
 
-* Storing: 0x22 -> 22 not 2*16+2
-* seconds, minutes, hours, weekday, day, month, year
-* SQW: Square Wave Output
-    * Good for creating interrupts
+The Clock that we connected in the previous section, DS1307, is called
+Real-time Clock (RTC) integrated circuit.
+This clock has a battery, and it could store and keep track of the current
+time and date.
+It has a RAM that stores the time in one byte registers.
+Here is the table, representing those registers with their addresses in its RAM.
 
 | Register     | Address |
 |--------------|---------|
@@ -173,10 +175,83 @@ If we only have the clock connected, the output would be `0x68`.
 | Month        | 0x05    |
 | Year         | 0x06    |
 
-![clock output read](clock-output-read.gif)
-![clock output write](clock-output-write.gif)
+As you can see, this table contains of **seconds**, **minutes**, **hours**,
+**Day of week** (e.g. Monday=0), **Day of Month**, **Month**, and **Year**.
+To access each of them, we can jump to the respected address and request
+read from that address which we are going to learn about it.
+But, at first, let's learn how it stores each register by an example.
+If it stores `0x23` it doesn't mean $2 \times 16 + 3=35$,
+it means $2 \times 10 + 3=23$.
+As you might have noticed, the highest value of the hex digit is based on
+10, not 16.
+This is the part that we should consider when we get a register from the clock.
+
+Now, let's write a code to read **Minutes** and **Hours** from this clock.
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+
+#define CLOCK_ADDRESS 0x68
+
+void setup()
+{
+  Serial.begin(9600);
+  Wire.begin();
+
+  delay(1000);
+
+  for (int i = 0; i < 128; i++)
+  {
+    Wire.beginTransmission(i);
+    if (Wire.endTransmission() == 0)
+    {
+      Serial.println("Device found at address: 0x" + String(i, HEX));
+    }
+  }
+}
+
+void loop()
+{
+  Wire.beginTransmission(CLOCK_ADDRESS);
+  Wire.write(0x01); // Address that we want to jump to
+  Wire.endTransmission();
+
+  Wire.requestFrom(CLOCK_ADDRESS, 2);
+
+  byte minutes = Wire.read();
+  byte hours = Wire.read();
+
+  Serial.println("Minutes: " + String(minutes, HEX));
+  Serial.println("Hours: " + String(hours, HEX));
+
+  delay(1000);
+}
+```
+
+As you can see, in the code above, we have read the minutes and hours registers in the clock.
+In the loop function, first we started a transmission.
+The first transmission, in the standard of this clock, is the address that we want to jump to.
+So, we jumped at the `0x01` to access the minutes register.
+After that, we requested to read 2 bytes from the clock.
+We know that these bytes would represent the minutes and hours.
+After our request, we should call the function `read` in order to read those bytes.
+Your result should look like the figure below.
+
+![Clock Output minutes and hours](clock-output-minutes-hours.webp)
+
+> Note: it's a good practice to keep the scanning code to make sure all the devices you are working with are
+> connected.
+
+Now, read all the registers and print them in the serial terminal.
+Your output should look like this:
+
+![Clock output read 7 registers](clock-output-read-7-registers.webp)
 
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
+
+> Advance note: SQW pin is short for (Square Wave Output).
+> It is useful when we want to create an interrupt.
 
 ## OLED: SSD1306
 
