@@ -108,12 +108,15 @@ Let's connect an **I2C** component to the **Arduino** and check these functions.
 
 ## Finding I2C address
 
-* Connect the clock
-* write the code
-* Explain the code
-* end transmission = 0
+Now, let's connect an I2C component to an Arduino and find its I2C address.
+For the I2C component, we choose a clock called **DS1307**
+(**Micro/Peripherals/DS1307**).
+Let's connect its **SCL** pin to **A5** and **SDA** to **A4**.
 
 ![add-clock](add-clock.webp)
+
+Your connection should look like the figure above.
+Now, let's write a code to find the address of this clock.
 
 ```cpp
 #include <Arduino.h>
@@ -127,7 +130,7 @@ void setup()
 
 void loop()
 {
-  for (int i = 0; i < 127; i++)
+  for (int i = 0; i < 128; i++)
   {
     Wire.beginTransmission(i);
     if (Wire.endTransmission() == 0)
@@ -139,12 +142,22 @@ void loop()
 }
 ```
 
+As you can see, in the code above, we scan all the possible addresses.
+We have a `for loop` that starts from `0` and continues until before `128`.
+As you recall we said that we have only 7-bits for the slave address ($2^7 = 128$).
+Then we try to start communication with each id without any data transmitted.
+if we could close that connection without any errors (`Wire.endTransmission() == 0`), it means that there is a component
+connected with that id that could send the acknowledgement bit.
+Then, we print that id, in a hex format, in the serial terminal.
+
+If we only have the clock connected, the output would be `0x68`.
+
 ## Clock: DS1307
 
 * Storing: 0x22 -> 22 not 2*16+2
 * seconds, minutes, hours, weekday, day, month, year
 * SQW: Square Wave Output
-  * Good for creating interrupts
+    * Good for creating interrupts
 
 | Register     | Address |
 |--------------|---------|
