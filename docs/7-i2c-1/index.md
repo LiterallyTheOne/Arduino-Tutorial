@@ -152,6 +152,10 @@ Then, we print that id, in a hex format, in the serial terminal.
 
 If we only have the clock connected, the output would be `0x68`.
 
+> Advance note: the 7-bit range that other components could use for
+> the slave address is from 0x08 to 0x77.
+> The other addresses are reserved for the I2C connection.
+
 ## Clock: DS1307
 
 * Storing: 0x22 -> 22 not 2*16+2
