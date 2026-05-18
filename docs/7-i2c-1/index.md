@@ -255,16 +255,38 @@ Your output should look like this:
 
 ## OLED: SSD1306
 
+OLED (Organic Light Emitting Diode) is a graphic display module.
+This component is also working with the I2C communication protocol.
+There are different models of an OLED, the version that we are working
+with in this tutorial is **SSD1306**.
+You can find this component in SimulIDE at **Outputs/Displays/SSD1306**.
+Now, let's connect this component alongside with our clock.
+As we already know, we should connect **SCL** to **A5** and
+**SDA** to **A4**.
+Your connection should look like this:
+
+![OLED](oled.webp)
+
+To control this component, we can use a library called `Adafruit`.
+To add `Adafruit` to our project, we should add its graphic library
+and a specific library designed for `SSD1306`.
+Here is how we can do it:
+
 ```ini
 lib_deps =
     Adafruit SSD1306
     Adafruit GFX Library
 ```
 
+After that, we should include them in our code.
+We can do it like below:
+
 ```cpp
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 ```
+
+Then it's time to create an object to control our OLED display module.
 
 ```cpp
 #define SCREEN_WIDTH 128
@@ -272,6 +294,16 @@ lib_deps =
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
 ```
+
+As you can see in the code above,
+at first, we should define width and height of our screen, which is $128 \times 64$.
+Then, to initialize it we need three arguments:
+
+* Width
+* Height
+* Object of the `Wire`
+
+Now, we can start our display and config it in a way that we want.
 
 ```cpp
 if (!display.begin(SSD1306_SWITCHCAPVCC, SSD1306_ADDRESS))
@@ -285,26 +317,78 @@ display.setTextSize(1);
 display.setTextColor(WHITE, BLACK);
 ```
 
-```cpp
-display.clearDisplay();
-display.setCursor(0, 0);
-```
+As you can see in the code above, at first, we used `begin`
+to set up our display.
+Then, if the setup was not successful, we print that the setup is failed,
+and we have an infinite loop to stop the program from continuing.
+After that, we set the text size and text color.
+The function `setTextColor`, takes two arguments, first the color
+that we want to write and second the background color.
+In the code above, we set the writing color to *white* and the background
+color to `black`.
+
+Like `LiquidCrystal` that we previously worked with,
+`Adafruit` also has functions to write and draw things on the display.
+To write something we can use the `print` function.
+To display what we have written, we can use the function called `display`.
+If we don't call this function after each print, we won't see the output
+on our display.
+One of the advantages and most important things about the `Adafruit` graphic
+designer is that it works *lazy*.
+Here by the *lazy* we mean, at first it gets all the things
+that it has to display.
+Then, when we call `display`, it finds the best solution to display them.
 
 ```cpp
 display.print();
 display.display();
 ```
 
-![OLED](oled.webp)
+We also have functions to clear the display and set the cursor to the
+position that we want.
 
-![OLED gif](oled-gif.gif)
+```cpp
+display.clearDisplay();
+display.setCursor(0, 0);
+```
+
+We have so many functions that we can use, we can draw a line with `drawLine`,
+draw a rectangle with `drawRect`.
+You can look at the documentation or search them to learn more about them.
+Also, here is a good example:
 
 > [Good Example](https://github.com/adafruit/Adafruit_SSD1306/blob/master/examples/ssd1306_128x64_i2c/ssd1306_128x64_i2c.ino)
 
+Now, print the all the registers that we get from
+the clock into our graphical display.
+Your output should look like this:
+
+![OLED gif](oled-gif.gif)
+
 ## Project
+
+Now, let's do a project.
 
 ![oled ball](oled-ball.gif)
 
+As you can see, in the figure above, we have a display and a clock
+connected to our **Arduino**.
+At first, we want to display the date at the first line.
+Then, create a border.
+After that, draw a circle on that border and program that ball in a way that:
+
+* moves diagonally
+* every time it hits the border, it bounces back
+
 ![OLED Ball line](oled-ball-line.gif)
+
+For the extra practice, you can add a line to the border
+and add two interrupts, like above.
+This line should function like:
+
+* Every time the ball hits that line it should bounce back
+* One of the interrupts should move the line left
+* The other one should move the line right
+* The line shouldn't be able to go out of the border
 
 ## Conclusion
