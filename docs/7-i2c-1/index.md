@@ -392,3 +392,10 @@ This line should function like:
 * The line shouldn't be able to go out of the border
 
 ## Conclusion
+
+In this tutorial, we have learned about I2C communication.
+We explained this protocol and learned how to control it with
+the `Wire` library.
+Then, we worked with a Real Time Clock and gets the time registers from it.
+After that, we introduced another component, called OLED.
+We mangaed to draw shapes and write texts with this component.
