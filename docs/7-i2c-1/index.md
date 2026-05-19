@@ -240,8 +240,8 @@ Your result should look like the figure below.
 
 ![Clock Output minutes and hours](clock-output-minutes-hours.webp)
 
-> Note: it's a good practice to keep the scanning code to make sure all the devices you are working with are
-> connected.
+> Note: it's a good practice to keep the scanning code in the setup
+> to make sure all the devices you are working with are connected.
 
 Now, read all the registers and print them in the serial terminal.
 Your output should look like this:
