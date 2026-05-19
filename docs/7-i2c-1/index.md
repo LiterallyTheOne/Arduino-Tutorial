@@ -248,6 +248,79 @@ Your output should look like this:
 
 ![Clock output read 7 registers](clock-output-read-7-registers.webp)
 
+So far, we have learned how to read from the clock.
+Now, let's learn how to write data on it.
+To do so, at first we should jump to the address of the register
+that we want.
+For example, if we want to write in the minutes register, we should jump to
+`0x01`.
+After that, we can write the data that we want.
+The important thing that we should keep in our mind is how the clock
+stores data.
+If we have a variable with the value of `25` and tell the clock
+to store it in the minutes register, it would think we mean: `0x19` (`25/16=1 25%16=9`).
+So, to really store `25` minutes, we should convert it to `0x25`.
+We can do this like this: $2 \times 16+5=37=$`0x25`.
+Here is the code that we can use:
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+
+#define CLOCK_ADDRESS 0x68
+
+void setup()
+{
+  Serial.begin(9600);
+  Wire.begin();
+
+  delay(1000);
+
+  for (int i = 0; i < 128; i++)
+  {
+    Wire.beginTransmission(i);
+    if (Wire.endTransmission() == 0)
+    {
+      Serial.println("Device found at address: 0x" + String(i, HEX));
+    }
+  }
+}
+
+void loop()
+{
+  byte minutes_to_write = 25;
+  // convert 25 to 0x25
+  minutes_to_write = (minutes_to_write / 10) * 16 + minutes_to_write % 10;
+
+  // Write minutes
+  Wire.beginTransmission(CLOCK_ADDRESS);
+  Wire.write(0x01); // Address that we want to jump to
+  Wire.write(minutes_to_write);
+  Wire.endTransmission();
+
+  // Read minutes
+  Wire.beginTransmission(CLOCK_ADDRESS);
+  Wire.write(0x01); // Address that we want to jump to
+  Wire.endTransmission();
+
+  Wire.requestFrom(CLOCK_ADDRESS, 1);
+
+  byte minutes = Wire.read();
+
+  Serial.println("Minutes:" + String(minutes, HEX));
+
+  delay(1000);
+}
+```
+
+As you can see, in the code above, we have applied the converting properly
+and then send the data to the correct register.
+After that, to make sure we have written a correct data, we read that
+register and print its value.
+Here is the output:
+
+![Clock write minutes](clock-write-minutes.webp)
+
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ds1307.pdf)
 
 > Advance note: SQW pin is short for (Square Wave Output).
