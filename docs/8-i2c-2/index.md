@@ -220,12 +220,119 @@ the number displayed in the serial terminal would change accordingly.
 
 ## Arduino as an I2C Slave
 
-* `onRequest`
-* `onReceive`
+Now, to understand the I2C communication better, let's
+learn how to set up an **Arduino** as a slave.
+At first, let's connect another **Arduino Uno** to our current setup.
+The connection should look like this:
 
 ![Arduino slave temperature](arudino-slave-temperature.webp)
 
+As you can see `A4` is connected to `A4` (SDA) and `A5` (SCL) of the both
+are connected together.
+Now, it's time to set up our **Arduino** as a slave.
+To do so, at first we need a separate project for our second **Arduino**.
+Then, we need to set up `Wire` with the address that we want to give that
+**Arduino** to be able to call it.
+We can do this like below:
+
+```cpp
+Wire.begin(8);
+```
+
+In the code above, we set the address to `8`.
+We should remember that address anytime that we want to call
+the second **Arduino**.
+
+As you can recall, we have two modes when we want to start a communication
+with a slave.
+We can write to a slave, or we can read from it.
+Now, let's implement both of the modes, starting from writing to it.
+
+When we write on a slave, that slave should **receive** that data.
+To say, what to do when you are receiving data, we should define
+a function and pass it to `Wire`.
+Here is how we can use it.
+
+```cpp
+Wire.onReceive(receiveEvent);
+```
+
+On the code above, when we receive a data, a function called `receiveEvent`
+would be called.
+This calling would work like an `Interrupt`, so we can sure
+we don't miss the data when we receive it.
+Now, let's implement that function.
+
+```cpp
+String result;
+bool i2c_ready = false;
+
+void receiveEvent(int howMany)
+{
+  i2c_ready = true;
+  result = "";
+  while (Wire.available())
+  {
+    char c = Wire.read();
+    result += c;
+  }
+}
+```
+
+The code above, is one of the ways that we can use to implement that function.
+As you can see, we have two global variables called `result` and `i2c_ready`.
+`result` stores the data received and `i2c_ready` sets to `true` when there
+is data.
+For the `receiveEvent` function, we should have an argument.
+This argument contains the number of the bytes sent to the slave from the master.
+Anytime that this function is called, we set `i2c_ready` to `true` and remove
+the previous data.
+Then we read all the bytes and add them to `result` until the communication is closed.
+
+Now, let's write the data received in the slave **Arduino** to the serial
+terminal in our `loop` function.
+Here is the code that can achieve that.
+
+```cpp
+if (i2c_ready)
+{
+  i2c_ready = false;
+  Serial.println(result);
+}
+```
+
+In the code above, we check `i2c_ready` to see if there is any data received or not.
+If there was any, we set `i2c_ready` to `false` and print that data.
+
+Now, let's send data from the master **Arduino** to see if we can catch it
+in our slave.
+To do so, we can use a code like this:
+
+```cpp
+#define ARDUINO_2 0x08
+```
+
+```cpp
+String str_temp = String(temperature);
+
+Wire.beginTransmission(ARDUINO_2);
+for (unsigned int i = 0; i < str_temp.length(); i++)
+{
+  Wire.write(str_temp[i]);
+}
+Wire.endTransmission();
+```
+
+First, we add a definition with the value of `0x08` (Arduino slave address that we set)
+called `ARDUINO_2`.
+Then, after reading the temperature, we cast it into `String`.
+Then we start a transmission with our second **Arduino** and
+send all the bytes of that string to it.
+And finally we close the transmission.
+Here is the output:
+
 ![Arduino slave temperature gif](arudino-slave-temperature-gif.gif)
+
 
 ![Arduino slave temperature request gif](arduino-slave-temperature-request-gif.gif)
 
