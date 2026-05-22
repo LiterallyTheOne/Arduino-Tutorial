@@ -209,6 +209,9 @@ Your output should look like below:
 
 ![temperature output gif](temperature-output-gif.gif)
 
+As you can see, in the output above, when we change the temperature,
+the number displayed in the serial terminal would change accordingly.
+
 > [Link to the Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf)
 >
 > [Command Table](https://www.analog.com/media/en/technical-documentation/data-sheets/DS1621.pdf#page=10.84)
