@@ -26,7 +26,7 @@ void setup()
   Serial.begin(9600);
   Wire.begin();
 
-  for (int i = 0; i < 127; i++)
+  for (int i = 0; i < 128; i++)
   {
     Wire.beginTransmission(i);
     if (Wire.endTransmission() == 0)
