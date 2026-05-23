@@ -333,6 +333,64 @@ Here is the output:
 
 ![Arduino slave temperature gif](arudino-slave-temperature-gif.gif)
 
+Now, let's learn how to request read from slave.
+To handle the request, we can use a function called `onRequest`.
+This function gets called when we master wants to read data
+from the slave.
+Here is an example of how we can use it:
+
+```cpp
+Wire.onRequest(requestEvent);
+```
+
+As you can see, in the code above, we have a function called `requestEvent`
+which we are going to implement it later.
+We pass that function to `Wire.onRequest`.
+Now, let's implement `requestEvent` in a way that it has `5` as its
+first byte and `6` as its second byte.
+Here is the code for that.
+
+```cpp
+void requestEvent()
+{
+    Wire.write(5);
+    Wire.write(6);
+}
+```
+
+Now, let's go to our master and request two bytes.
+Here would be the code for that.
+
+```cpp
+Wire.requestFrom(ARDUINO_2, 2);
+String received_data = "";
+received_data += Wire.read();
+received_data += Wire.read();
+
+Serial.println("Received from Arduino 2: " + received_data);
+```
+
+As you can see, in the code above, we have read `2` bytes
+and add them to a string called `received_data`.
+Then, we display this variable into Serial Terminal.
+
+Before running that code, we should say an important implementation
+detail in `Wire`.
+In `Wire`, `onReceive` function gets triggered in both sending and receiving
+data.
+To prevent the code in the function from executing when it is not needed
+to be executed, we can do something like this at the start of the function.
+
+```cpp
+if (howMany == 0)
+    return;
+```
+
+As you can see, in the code above, we checked if the master wants any bytes
+or not.
+If it didn't need any bytes (`howMany == 0`), we would put a `return`.
+This helps us not to execute the rest of the codes in that function.
+The output would look like this:
 
 ![Arduino slave temperature request gif](arduino-slave-temperature-request-gif.gif)
 
