@@ -395,3 +395,9 @@ The output would look like this:
 ![Arduino slave temperature request gif](arduino-slave-temperature-request-gif.gif)
 
 ## Conclusion
+
+In this tutorial, we dived deeper in I2C communication.
+At first, we learned about another component called `DS1621`.
+This component would measure the temperature.
+Then, we have learned how to set up an **Arduino** to be an slave in
+serial communication.
